@@ -1,6 +1,5 @@
 ## Atom
 
----
 
 * [Setting](#setting)
 * [Packages](#packages)

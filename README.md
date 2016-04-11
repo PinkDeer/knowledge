@@ -1,6 +1,5 @@
 ## Content
 
----
 
 * [Atom](/atom.md)
 * [Bash](bash.md)

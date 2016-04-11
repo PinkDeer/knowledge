@@ -1,6 +1,5 @@
 ## Rails
 
----
 
 * [Install Rails](#install-Rails)
 

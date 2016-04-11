@@ -1,6 +1,5 @@
 ## Github
 
----
 
 * [Commands](#commands)
 * [Markdown](#markdown)
