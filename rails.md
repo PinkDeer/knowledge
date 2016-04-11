@@ -1,16 +1,20 @@
-### Rails
+## Rails
 
-----------
+---
 
-#### Install Rails
+* [Install Rails](#install-Rails)
 
-##### Firts-time system setup
+### Install Rails
+
+---
+
+#### Firts-time system setup
 
 ```
 sudo apt-get update
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 ```
-##### rbenv
+#### rbenv
 ```
 cd
 git clone git://github.com/sstephenson/rbenv.git .rbenv
@@ -28,13 +32,13 @@ rbenv install 2.3.0
 rbenv global 2.3.0
 ruby -v
 ```
-##### Install Bundler
+#### Install Bundler
 
 ```
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 gem install bundler
 ```
-##### Rails
+#### Rails
 
 ```
 sudo add-apt-repository ppa:chris-lea/node.js
@@ -44,3 +48,5 @@ gem install rails
 rbenv rehash
 rails -v
 ```
+
+[To contents](#rails)

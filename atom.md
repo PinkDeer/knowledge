@@ -1,16 +1,25 @@
-### Atom
+## Atom
 
-----------
+---
 
-[atom.io](https://atom.io/)
+* [Setting](#setting)
+* [Packages](#packages)
 
-##### Setting:
+#### [Official site](https://atom.io/)
+
+#### Setting:
+
+---
 
 * File -> Setting -> uncheck "Open Empty Editor On Start"
 * Project Home: /home/...
 * Packages -> Core Packages -> autosave -> Setting ->check "Enabled"
 
-##### Packages:
+[To contents](#atom)
+
+#### Packages:
+
+---
 
 * [atom beautify](https://atom.io/packages/atom-beautify)
 * [file Icons](https://atom.io/packages/file-icons)
@@ -34,3 +43,5 @@
   * [sass](https://atom.io/packages/linter-sass-lint)
   * [scss](https://atom.io/packages/linter-scss-lint)
   * [slim](https://atom.io/packages/linter-slim)
+
+[To contents](#atom)
