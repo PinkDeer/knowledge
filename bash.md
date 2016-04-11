@@ -1,12 +1,11 @@
 ### Bash
 
-* [cd](#go-to-the-root-directory)
-* [pwd](#pwd)
+* [cd](#cd)
 * [ls](#ls)
 * [mkdir](#mkdir)
 * [kill](#kill)
 
-#### CD
+#### cd
 
 ##### Go to the root directory
 ```
@@ -48,7 +47,9 @@ A special directory "." points to the current directory
 \$ ./script.sh
 ```
 
-#### ls ([en](https://en.wikipedia.org/wiki/Ls)|[rus](http://rus-linux.net/MyLDP/consol/hdrguide/rusman/ls.htm))
+#### ls
+([en](https://en.wikipedia.org/wiki/Ls)|[rus](http://rus-linux.net/MyLDP/consol/hdrguide/rusman/ls.htm))
+
 Invoked without any arguments, ls lists the files in the current working directory.
 ```l
 \$ ls
@@ -65,7 +66,9 @@ Without options, ls displays files in a bare format. This bare format however ma
 *  -h print sizes in human readable format. (e.g., 1K, 234M, 2G, etc.) This option is not part of the POSIX standard, although implemented in several systems, e.g., GNU coreutils in 1997, FreeBSD 4.5 in 2002, and Solaris 9 in 2002.
 * -i option lists the inode ([en](https://en.wikipedia.org/wiki/Inode)|[rus](https://ru.wikipedia.org/wiki/Inode)) number before the filename.
 
-#### mkdir ([en](https://en.wikipedia.org/wiki/Mkdir)|[rus](https://ru.wikipedia.org/wiki/Mkdir))
+#### mkdir
+([en](https://en.wikipedia.org/wiki/Mkdir)|[rus](https://ru.wikipedia.org/wiki/Mkdir))
+
 ```
 $ mkdir folder
 ```
@@ -74,7 +77,9 @@ or
 $ mkdir -p folder/folder2/folder3
 ```
 
-#### kill ([en](http://linux.die.net/man/1/killall)|[rus](http://rus-linux.net/MyLDP/BOOKS/MDK-10/process-signals.html)|[habr](https://habrahabr.ru/post/95102/))
+#### kill
+([en](http://linux.die.net/man/1/killall)|[rus](http://rus-linux.net/MyLDP/BOOKS/MDK-10/process-signals.html)|[habr](https://habrahabr.ru/post/95102/))
+
 killall - kill processes by name
 ```
 killall firefox
