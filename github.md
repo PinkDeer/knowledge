@@ -21,6 +21,6 @@ git push -u origin master
 ```
 
 ##### Markdown
-* [About](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
+* [About](https://help.github.com/articles/about-writing-and-formatting-on-github/)
 * [Basic syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 * [Markdown editor](https://stackedit.io/editor) and [other](https://jbt.github.io/markdown-editor/)
