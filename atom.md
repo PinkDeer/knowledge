@@ -1,4 +1,4 @@
-#### Atom
+### Atom
 
 [atom.io](https://atom.io/)
 

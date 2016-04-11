@@ -1,4 +1,4 @@
-#### Gems
+### Gems
 
 * [better_errors](https://rubygems.org/gems/better_errors)
 * [bootstrap-sass](https://rubygems.org/gems/bootstrap-sass)
