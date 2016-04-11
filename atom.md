@@ -1,14 +1,16 @@
 ### Atom
 
+----------
+
 [atom.io](https://atom.io/)
 
-Setting:
+##### Setting:
 
 * File -> Setting -> uncheck "Open Empty Editor On Start"
 * Project Home: /home/...
 * Packages -> Core Packages -> autosave -> Setting ->check "Enabled"
 
-Packages:
+##### Packages:
 
 * [atom beautify](https://atom.io/packages/atom-beautify)
 * [file Icons](https://atom.io/packages/file-icons)
@@ -26,9 +28,9 @@ Packages:
 * [pdf-view](https://atom.io/packages/pdf-view)
 * [minimap-highlight-selected](https://atom.io/packages/minimap-highlight-selected)
 * [linter](https://atom.io/packages/linter)
-* [erb](https://atom.io/packages/linter-erb)
-* [css](https://atom.io/packages/linter-csslint)
-* [haml](https://atom.io/packages/linter-haml)
-* [sass](https://atom.io/packages/linter-sass-lint)
-* [scss](https://atom.io/packages/linter-scss-lint)
-* [slim](https://atom.io/packages/linter-slim)
+  * [erb](https://atom.io/packages/linter-erb)
+  * [css](https://atom.io/packages/linter-csslint)
+  * [haml](https://atom.io/packages/linter-haml)
+  * [sass](https://atom.io/packages/linter-sass-lint)
+  * [scss](https://atom.io/packages/linter-scss-lint)
+  * [slim](https://atom.io/packages/linter-slim)

@@ -1,5 +1,7 @@
 ### Bash
 
+----------
+
 * [cd](#cd)
 * [ls](#ls)
 * [mkdir](#mkdir)
