@@ -4,6 +4,7 @@
 * [cd](#cd)
 * [ls](#ls)
 * [mkdir](#mkdir)
+* [touch](#touch)
 * [echo](#echo)
 * [kill](#kill)
 
@@ -94,23 +95,37 @@ $ mkdir -p folder/folder2/folder3
 ```
 [To contents](#bash)
 
+
+### touch
+
+---
+
+([en](https://en.wikipedia.org/wiki/Touch_%28Unix%29)|[rus](http://itcollider.ru/forum/linuxoid/1181-komanda-touch-v-linux.html))
+
+touch - change file timestamps 
+```
+\$ touch filename
+```
+Also create empty files if they are not
+
+[To contents](#bash)
+
+
 ### echo
 
 ---
 
-([en](http://linux.die.net/man/1/killall)|[rus](http://rus-linux.net/MyLDP/BOOKS/MDK-10/process-signals.html)|[habr](https://habrahabr.ru/post/95102/))
+([en](http://linux.die.net/man/1/echo)|[rus](https://ru.wikipedia.org/wiki/Echo)|[habr](https://habrahabr.ru/post/119436/))
 
-killall - kill processes by name
+echo - display a line of text 
 ```
-killall firefox
+\$ echo "firstfile"
 ```
-or
+To write a string to a file
 ```
-admin@pingvinus:~$ ps -Aef | grep firefox
-admin     2275     1 11 07:42 ?        00:05:52 /usr/lib/firefox-3.5.8/firefox
-admin     2821  2800  0 08:32 pts/2    00:00:00 grep firefox
-admin@pingvinus:~$ kill 2275
+\$ echo "firstfile" > filename
 ```
+
 [To contents](#bash)
 
 
@@ -118,9 +133,9 @@ admin@pingvinus:~$ kill 2275
 
 ---
 
-([en](http://linux.die.net/man/1/killall)|[rus](https://ru.wikipedia.org/wiki/Echo)|[habr](https://habrahabr.ru/post/119436/))
+([en](http://linux.die.net/man/1/killall)|[rus](http://rus-linux.net/MyLDP/BOOKS/MDK-10/process-signals.html)|[habr](https://habrahabr.ru/post/95102/))
 
-echo - display a line of text 
+killall - kill processes by name
 ```
 killall firefox
 ```
