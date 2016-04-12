@@ -1,7 +1,7 @@
 ## Gems
 
 
-#### [Site](https://rubygems.org/)
+#### [rubygems.org](https://rubygems.org/)
 
 * [better_errors](https://rubygems.org/gems/better_errors)
 * [bootstrap-sass](https://rubygems.org/gems/bootstrap-sass)

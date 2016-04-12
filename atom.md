@@ -1,22 +1,23 @@
 ## Atom
 
 
-* [Setting](#setting)
-* [Packages](#packages)
+* [Найтройка](#настройка)
+* [Пакеты](#пакеты)
 
-#### [Official site](https://atom.io/)
+#### [Официальный сайт](https://atom.io/)
 
-#### Setting:
+#### Настройка:
 
 ---
 
 * File -> Setting -> uncheck "Open Empty Editor On Start"
 * Project Home: /home/...
-* Packages -> Core Packages -> autosave -> Setting ->check "Enabled"
+* Packages -> Core Packages -> autosave -> Setting -> check "Enabled"
 
-[To contents](#atom)
 
-#### Packages:
+[![](/image/up.xcf)](#atom)
+
+#### Пакеты:
 
 ---
 
@@ -43,4 +44,4 @@
   * [scss](https://atom.io/packages/linter-scss-lint)
   * [slim](https://atom.io/packages/linter-slim)
 
-[To contents](#atom)
+[![](/image/up.xcf)](#atom)
