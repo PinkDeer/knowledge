@@ -15,7 +15,7 @@
 * Packages -> Core Packages -> autosave -> Setting -> check "Enabled"
 
 
-[![](/image/up.xcf)](#atom)
+[![up](/image/up.png)](#atom)
 
 #### Пакеты:
 
@@ -44,4 +44,4 @@
   * [scss](https://atom.io/packages/linter-scss-lint)
   * [slim](https://atom.io/packages/linter-slim)
 
-[![](/image/up.xcf)](#atom)
+[![up](/image/up.png)](#atom)
