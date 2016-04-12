@@ -26,6 +26,13 @@ git remote add orogin https://github.com/<username>/<appname>.git
 git push -u origin master
 ```
 
+#### Download new merge master branch from a remote repository
+```
+git fetch --all
+git reset --hard origin/master
+git pull origin master
+```
+
 [To contents](#github)
 
 ### Markdown
