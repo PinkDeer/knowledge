@@ -1,9 +1,9 @@
 ## Rails
 
 
-* [Установка Rails](#установка-Rails)
+* [Установка rails](#установка-rails)
 
-### Установка Rails
+### Установка rails
 
 ---
 
@@ -31,13 +31,13 @@ rbenv install 2.3.0
 rbenv global 2.3.0
 ruby -v
 ```
-#### Установка Bundler
+#### Установка bundler
 
 ```
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 gem install bundler
 ```
-#### Установка Rails
+#### Установка rails
 
 ```
 sudo add-apt-repository ppa:chris-lea/node.js
