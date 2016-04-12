@@ -1,19 +1,19 @@
 ## Rails
 
 
-* [Install Rails](#install-Rails)
+* [Установка Rails](#установка-Rails)
 
-### Install Rails
+### Установка Rails
 
 ---
 
-#### Firts-time system setup
+#### Первоначальная настройка системы
 
 ```
 sudo apt-get update
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 ```
-#### rbenv
+#### Установка rbenv и ruby
 ```
 cd
 git clone git://github.com/sstephenson/rbenv.git .rbenv
@@ -31,13 +31,13 @@ rbenv install 2.3.0
 rbenv global 2.3.0
 ruby -v
 ```
-#### Install Bundler
+#### Установка Bundler
 
 ```
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 gem install bundler
 ```
-#### Rails
+#### Установка Rails
 
 ```
 sudo add-apt-repository ppa:chris-lea/node.js
@@ -48,4 +48,4 @@ rbenv rehash
 rails -v
 ```
 
-[To contents](#rails)
+[![up](/image/up.png)](#rails)

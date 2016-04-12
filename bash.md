@@ -52,7 +52,8 @@ A special directory "." points to the current directory
 ```
 \$ ./script.sh
 ```
-[To contents](#bash)
+[![up](/image/up.png)](#bash)
+
 
 
 ### ls
@@ -77,7 +78,8 @@ Without options, ls displays files in a bare format. This bare format however ma
 *  -h print sizes in human readable format. (e.g., 1K, 234M, 2G, etc.) This option is not part of the POSIX standard, although implemented in several systems, e.g., GNU coreutils in 1997, FreeBSD 4.5 in 2002, and Solaris 9 in 2002.
 * -i option lists the inode ([en](https://en.wikipedia.org/wiki/Inode)|[rus](https://ru.wikipedia.org/wiki/Inode)) number before the filename.
 
-[To contents](#bash)
+[![up](/image/up.png)](#bash)
+
 
 
 ### mkdir
@@ -93,7 +95,8 @@ or
 ```
 $ mkdir -p folder/folder2/folder3
 ```
-[To contents](#bash)
+[![up](/image/up.png)](#bash)
+
 
 
 ### touch
@@ -108,7 +111,8 @@ touch - change file timestamps
 ```
 Also create empty files if they are not
 
-[To contents](#bash)
+[![up](/image/up.png)](#bash)
+
 
 
 ### echo
@@ -126,7 +130,7 @@ To write a string to a file
 \$ echo "firstfile" > filename
 ```
 
-[To contents](#bash)
+[![up](/image/up.png)](#bash)
 
 
 ### kill
@@ -146,4 +150,4 @@ admin     2275     1 11 07:42 ?        00:05:52 /usr/lib/firefox-3.5.8/firefox
 admin     2821  2800  0 08:32 pts/2    00:00:00 grep firefox
 admin@pingvinus:~$ kill 2275
 ```
-[To contents](#bash)
+[![up](/image/up.png)](#bash)

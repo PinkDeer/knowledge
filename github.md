@@ -1,21 +1,21 @@
 ## Github
 
 
-* [Commands](#commands)
+* [Команды](#команды)
 * [Markdown](#markdown)
 
-### Commands
+### Команды
 
 ---
 
-#### Firts-time system setup
+#### Первоначальная настройка системы
 
 ```
 git config --global user.name "YourName"
 git config --global user.email your.email@example.com
 ```
 
-#### First-time repository setup
+#### Первоначальная настройка репозитория
 
 ```
 git init
@@ -26,21 +26,22 @@ git remote add orogin https://github.com/<username>/<appname>.git
 git push -u origin master
 ```
 
-#### Download new merge master branch from a remote repository
+#### Загрузить и мержить ветку master удаленного репозитория
 ```
 git fetch --all
 git reset --hard origin/master
 git pull origin master
 ```
 
-[To contents](#github)
+[![up](/image/up.png)](#github)
+
 
 ### Markdown
 
 ---
 
-* [About](https://help.github.com/articles/about-writing-and-formatting-on-github/)
-* [Basic syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
-* [Markdown editor](https://stackedit.io/editor) and [other](https://jbt.github.io/markdown-editor/)
+* [О markdown](https://help.github.com/articles/about-writing-and-formatting-on-github/)
+* [Базовый синтаксис](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
+* [Редактор](https://jbt.github.io/markdown-editor/)
 
-[To contents](#github)
+[![up](/image/up.png)](#github)
