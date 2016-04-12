@@ -4,6 +4,7 @@
 * [cd](#cd)
 * [ls](#ls)
 * [mkdir](#mkdir)
+* [echo](#echo)
 * [kill](#kill)
 
 
@@ -93,14 +94,33 @@ $ mkdir -p folder/folder2/folder3
 ```
 [To contents](#bash)
 
-
-### kill
+### echo
 
 ---
 
 ([en](http://linux.die.net/man/1/killall)|[rus](http://rus-linux.net/MyLDP/BOOKS/MDK-10/process-signals.html)|[habr](https://habrahabr.ru/post/95102/))
 
 killall - kill processes by name
+```
+killall firefox
+```
+or
+```
+admin@pingvinus:~$ ps -Aef | grep firefox
+admin     2275     1 11 07:42 ?        00:05:52 /usr/lib/firefox-3.5.8/firefox
+admin     2821  2800  0 08:32 pts/2    00:00:00 grep firefox
+admin@pingvinus:~$ kill 2275
+```
+[To contents](#bash)
+
+
+### kill
+
+---
+
+([en](http://linux.die.net/man/1/killall)|[rus](https://ru.wikipedia.org/wiki/Echo)|[habr](https://habrahabr.ru/post/119436/))
+
+echo - display a line of text 
 ```
 killall firefox
 ```
