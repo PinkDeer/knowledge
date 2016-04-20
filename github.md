@@ -42,6 +42,6 @@ git pull origin master
 
 * [О markdown](https://help.github.com/articles/about-writing-and-formatting-on-github/)
 * [Базовый синтаксис](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
-* [Редактор](https://jbt.github.io/markdown-editor/)
+* [Редактор](https://jbt.github.io/markdown-editor/)|[Редактор2](https://stackedit.io/editor#) 
 
 [![up](/image/up.png)](#github)
