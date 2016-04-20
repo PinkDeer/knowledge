@@ -8,7 +8,7 @@
 * [echo](#echo)
 * [cat и cp](#cat-и-cp)
 * [mv](#mv)
-* [links](#cat-и-cp)
+* [links](#links)
 * [rm/rmdir](#rm/rmdir)
 * [kill](#kill)
 
@@ -346,8 +346,7 @@ lrwxrwxrwx    1 root     root           17 Mar 27 17:44 kc -> keychain
 
 [![up](/image/up.png)](#bash)
 
-
-### rm
+### rm/rmdir
 
 ---
 
@@ -383,7 +382,6 @@ alias rm="rm -i"
 ```
 rm -rf mydir
 ```
-
 
 [![up](/image/up.png)](#bash)
 
