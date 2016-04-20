@@ -9,7 +9,7 @@
 * [cat и cp](#cat-и-cp)
 * [mv](#mv)
 * [links](#links)
-* [rm/rmdir](#rm/rmdir)
+* [rm/rmdir](#rmrmdir)
 * [kill](#kill)
 
 > Большинство команд Linux могут быть запущены с параметром  "--help"
