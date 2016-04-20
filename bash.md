@@ -48,9 +48,9 @@ $ pwd
 /usr/bin
 /usr/local/bin
 ```
-#### Отночительный путь
+#### Отноcительный путь
 
-Путь отночительно текущей директории (pwd).
+Путь отноcительно текущей директории (pwd).
 ```
 \$ cd local/bin
 \$ pwd
@@ -142,11 +142,12 @@ $ mkdir -p folder/folder2/folder3
 
 ([en](https://en.wikipedia.org/wiki/Touch_%28Unix%29)|[rus](http://itcollider.ru/forum/linuxoid/1181-komanda-touch-v-linux.html))
 
-touch - change file timestamps 
+Команда touch обновляет время последнего доступа к файлу если он уже существует или создает новый пустой файл, если его ещё нету.
+
 ```
 \$ touch filename
 ```
-Also create empty files if they are not
+
 
 [![up](/image/up.png)](#bash)
 
@@ -158,11 +159,11 @@ Also create empty files if they are not
 
 ([en](http://linux.die.net/man/1/echo)|[rus](https://ru.wikipedia.org/wiki/Echo)|[habr](https://habrahabr.ru/post/119436/))
 
-echo - display a line of text 
+echo - команда, предназначенная для отображения строки текста
 ```
 \$ echo "firstfile"
 ```
-To write a string to a file
+Может служить для записи строки в файл, если используется > файл будет перезаписан, если >> строка будет дописана в конец файла.
 ```
 \$ echo "firstfile" > filename
 ```
@@ -176,11 +177,11 @@ To write a string to a file
 
 ([en](http://linux.die.net/man/1/killall)|[rus](http://rus-linux.net/MyLDP/BOOKS/MDK-10/process-signals.html)|[habr](https://habrahabr.ru/post/95102/))
 
-killall - kill processes by name
+killall - принудительное завершение программы
 ```
 killall firefox
 ```
-or
+или
 ```
 admin@pingvinus:~$ ps -Aef | grep firefox
 admin     2275     1 11 07:42 ?        00:05:52 /usr/lib/firefox-3.5.8/firefox
