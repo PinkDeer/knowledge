@@ -8,7 +8,7 @@
 - [ ] [Bash в примерах. Часть первая](http://linuxgeeks.ru/bash-1.htm)
 - [ ] [Bash в примерах. Часть вторая](http://linuxgeeks.ru/bash-2.htm)
 - [ ] [Bash by Example, Part 3](http://www.funtoo.org/Bash_by_Example,_Part_3)
-- [ ] [Учись программировать](http://www.shokhirev.com/mikhail/ruby/ltp/) _Completed: 4(10)_
+- [ ] [Учись программировать](http://www.shokhirev.com/mikhail/ruby/ltp/) _Completed: 5(10)_
 - [ ] [Ruby School](http://rubyschool.us/) _Completed: 2(50)_
 - [ ] [Ruby on Rails Tutorial](http://railstutorial.ru/chapters/4_0/beginning)
 - [ ] [SQL Задачи и решения](http://sql-tutorial.ru/)
