@@ -220,3 +220,23 @@ puts "x = #{x}" (только двойные кавычки)
 str.chomp! - ! указывает применить операцию chomp к  str.
 
 x.methods - список операций
+
+times
+
+10.times {puts ""}
+
+or
+
+10.times do
+	puts
+end
+
+another
+
+10.times {|i| puts i}
+
+or
+
+10.times do |i|
+	puts i
+end
