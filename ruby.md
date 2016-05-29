@@ -277,6 +277,7 @@ arr.dekete "aa" ("aa" - объекат)
 
 [["mike", 56],["alex", 72]] - двумерный массив
 
+
 Вывод массиса в порядковым номером
 
 arr = %w[make jr hank]
@@ -284,6 +285,17 @@ arr = %w[make jr hank]
 arr.each_with_index do |name, index|
   puts "#{index + 1}. #{name}"
 end
+
+
+or
+
+x = 0
+arr.each do |item|
+  x = x + 1
+  puts "#{x} #{item}"
+end
+
+
 
 arr ["text"] = ["text2","text3"] = заменить значение
 
@@ -301,3 +313,17 @@ hh = {}
 hh = {'mike'=>'35373',
 			'jessie'=>'31380'} - инициалазация массива.
 hh ['alex'] = 65 - добавить в хеш
+hh ['alex'] - доступ/обращение к элементу хэша по ключу
+
+hh.keys -> 35373 31380 (выводит ключи, массив ключей(аналогично .value, из каждого значения отдельыне мыссив))
+
+.each do |key, value|
+
+.each_key do |key|
+
+.each_value do |value|
+
+найти по ключу
+if hh.has.key? 'mike'
+	puts 'В хеше есть слово "mike"'
+end
