@@ -277,7 +277,17 @@ arr.dekete "aa" ("aa" - объекат)
 
 [["mike", 56],["alex", 72]] - двумерный массив
 
-Обменять значение двух переменных:
+Вывод массиса в порядковым номером
+
+arr = %w[make jr hank]
+
+arr.each_with_index do |name, index|
+  puts "#{index + 1}. #{name}"
+end
+
+arr ["text"] = ["text2","text3"] = заменить значение
+
+##### Обменять значение двух переменных:
 
 a, b = b, a (objects)
 or (integer)
