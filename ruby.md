@@ -374,3 +374,8 @@ puts "ok" if true - будет исполнено
 
 ruby app1.rb > file.text - перезаписать
 ruby app1.rb >> file.text - дописать в конец
+
+#### Атрибуты
+
+attr_reader - для чтения
+attr_accessor - для чтения и для записи
