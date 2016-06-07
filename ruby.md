@@ -379,3 +379,4 @@ ruby app1.rb >> file.text - дописать в конец
 
 attr_reader - для чтения
 attr_accessor - для чтения и для записи
+attr_writer - только запись
