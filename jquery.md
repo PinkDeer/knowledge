@@ -24,5 +24,7 @@ C "решеткой" необходимо обращаться по id (по и�
 ##### jQuery color picker
 
 [Ccылка](https://github.com/tkrotoff/jquery-simplecolorpicker)
+
 Разбор: 1.30 [Ruby School (Video) lessons 23](https://vimeo.com/104440956)
+
 Код: [Ruby School, (Github) lessons 23](https://github.com/PinkDeer/ruby/tree/master/rubyschool/lesson23)
