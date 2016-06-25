@@ -14,7 +14,7 @@ $('  ')...
 
 $ - вызов jQuery
 ('   ') - задаем параметр, в кавычках селектор
-Селектор может иметь вил: #aaa, .aaa
+Селектор может иметь вид: #aaa, .aaa
 C "решеткой" необходимо обращаться по id (по идентификатору), в элеметна задается атрибут id
 "Точка" помещается - в класс
 
@@ -32,8 +32,36 @@ C "решеткой" необходимо обращаться по id (по и�
 
 ##### jQuery color picker
 
-[Ccылка](https://github.com/tkrotoff/jquery-simplecolorpicker)
+[Github](https://github.com/tkrotoff/jquery-simplecolorpicker)
 
 Разбор: 1.30 [Ruby School (Video) lessons 23](https://vimeo.com/104440956)
 
 Код: [Ruby School, (Github) lessons 23](https://github.com/PinkDeer/ruby/tree/master/rubyschool/lesson23)
+
+
+#####
+
+[Github](https://github.com/xdan/datetimepicker)
+Разбор 1.10 https://vimeo.com/105281212
+
+Скачать
+
+```
+wget https://raw.githubusercontent.com/xdan/datetimepicker/master/jquery.datetimepicker.css
+wget https://raw.githubusercontent.com/xdan/datetimepicker/master/jquery.datetimepicker.js
+```
+
+ Подллючение в layout
+
+ ```
+ <script src="jquery.datetimepicker.js"></script>
+ <link rel="stylesheet" href="jquery.datetimepicker.css">
+ ```
+ HTML
+ ```
+ <input id="datetimepicker" type="text" >
+ ```
+ javascript
+ ```
+ jQuery('#datetimepicker').datetimepicker();
+ ```

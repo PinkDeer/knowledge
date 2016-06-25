@@ -24,3 +24,32 @@ select * from table_name - для завершения запроса необх
 .mode column - визуальная разбивка на стобцы
 
 .headers on - выводит названия столбцов
+
+
+типы данных sql http://sql-language.ru/sqldatetype.html
+
+datetime - можно использовать date_stamp
+
+
+CREATE TABLE Users (
+    id        INTEGER PRIMARY KEY AUTOINCREMENT,
+    username  TEXT,
+    phone     VARCHAR,
+    datastamp TEXT,
+    barber    TEXT,
+    color     TEXT
+);
+
+or создать таблицу если не создана
+
+CREATE TABLE IF NOT EXISTS Users(
+    id        INTEGER PRIMARY KEY AUTOINCREMENT,
+    username  TEXT,
+    phone     VARCHAR,
+    datastamp TEXT,
+    barber    TEXT,
+    color     TEXT
+);
+
+удалить таблицу
+drop table table_name

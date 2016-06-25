@@ -14,6 +14,7 @@
 * [rm/rmdir](#rmrmdir)
 * [wildcards](#wildcards)
 * [kill](#kill)
+* [wget](#wget)
 
 > Большинство команд Linux могут быть запущены с параметром  "--help"
 >
@@ -487,4 +488,21 @@ admin     2275     1 11 07:42 ?        00:05:52 /usr/lib/firefox-3.5.8/firefox
 admin     2821  2800  0 08:32 pts/2    00:00:00 grep firefox
 admin@pingvinus:~$ kill 2275
 ```
+[![up](/image/up.png)](#bash)
+
+
+### wget
+
+---
+
+[rus](http://help.ubuntu.ru/wiki/wget)
+
+wget - программа для скачивная файлов
+
+
+Если возникает проблема  сертифинатом, то использовать опцию
+```
+wget  --no-check-certificate https://randomsite.ru
+```
+
 [![up](/image/up.png)](#bash)
