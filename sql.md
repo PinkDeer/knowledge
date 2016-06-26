@@ -35,7 +35,7 @@ CREATE TABLE Users (
     id        INTEGER PRIMARY KEY AUTOINCREMENT,
     username  TEXT,
     phone     VARCHAR,
-    datastamp TEXT,
+    datestamp TEXT,
     barber    TEXT,
     color     TEXT
 );
