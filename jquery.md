@@ -25,7 +25,7 @@ C "решеткой" необходимо обращаться по id (по и�
   });
 </script>
 ```
-[![up](/image/up.png)](#bash)
+[![up](/image/up.png)](#jQuery)
 
 #### Плагины  
 
@@ -86,4 +86,4 @@ javascript
 ```
 jQuery('#datetimepicker').datetimepicker();
 ```
-[![up](/image/up.png)](#bash)
+[![up](/image/up.png)](#jQuery)
