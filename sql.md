@@ -1,55 +1,63 @@
-Создание новой база данных
-Создание новой таблица
-первое поле обычно id, data type Integer
-установить primary key and autoincrement
+[Atom](/atom.md) [Bash](bash.md) [Gems](/gems.md) [Github](/github.md) [jQuery](/jquery.md) [HTML](html.md) [Rails](rails.md) [Ruby](ruby.md) [SQL](sql.md) [SSH](ssh.md) [Tasks](tasks.md)
 
+## SQL
 
-SELECT * FROM table_name - вепнуть всю таблицу
+* [Типпы данных](#типпы-данных)
+* [Команды](#команды)
+* [Консоль](#консоль)
+* [Полезное](#полезное)
 
+### Типы данных
 
-добавить в таблицу
-INSERT INTO table_name (column1, column2, column3) VALUES (1, значенин, значение)
-если в первом поле автоинеремент, то поле и значение указвать не надо.
+[Типы данных sql](http://sql-language.ru/sqldatetype.html)
 
+### Команды
 
-работы с базой в консоли:
+select * from table_name - вепнуть всю таблицу
+drop table table_name - удалить таблицу
 
+### Консоль
+
+Для завершения запроса необходимо в конце строчки ставить  символ";"  
+
+Открыть таблицу в консоли
+```
 $ sqlite3 databases_name
+```
+Список таблиц
+```
+sqlite> .table
+```
+Визуальная разбивка на стобцы
+```
+sqlite> .mode column
+```
+Вывод названия столбцов
+```
+sqlite> .headers on
+```
+Выход из консоли
+```
+sqlite> .exit - выход
+```
 
-.table - список таблиц
-.exit - выход
+### Полезное
 
-select * from table_name - для завершения запроса необходимо в ставить ;
+#### Создание новой таблицы:
 
-.mode column - визуальная разбивка на стобцы
+При созданий новой таблицы, первое поле обычно создается со следующмим параметрами:  
+id, data type Integer, primary key and autoincrement
 
-.headers on - выводит названия столбцов
+#### добавить в таблицу
 
+insert into table_name (~~column1~~, column2, column3) VALUES (~~1~~, значение2, значение2)  
+Если в первом поле автоинкремент, то поле первое поле и значение для него в запросе указвать не нужно.
 
-типы данных sql http://sql-language.ru/sqldatetype.html
+#### Советы
 
-datetime - можно использовать date_stamp
+datetime - зарезевированное имя, вместо него можно использовать _date_stamp_.
 
-
-CREATE TABLE Users (
-    id        INTEGER PRIMARY KEY AUTOINCREMENT,
-    username  TEXT,
-    phone     VARCHAR,
-    datestamp TEXT,
-    barber    TEXT,
-    color     TEXT
-);
-
-or создать таблицу если не создана
-
-CREATE TABLE IF NOT EXISTS Users(
-    id        INTEGER PRIMARY KEY AUTOINCREMENT,
-    username  TEXT,
-    phone     VARCHAR,
-    datastamp TEXT,
-    barber    TEXT,
-    color     TEXT
-);
-
-удалить таблицу
-drop table table_name
+Если таблица не создана, то можно использовать команду:  
+```
+sqlite3> create table if not exists table_name
+```
