@@ -10,12 +10,14 @@
 ### Типы данных
 
 [Типы данных sql](http://sql-language.ru/sqldatetype.html)  
+
 [![up](/image/up.png)](#sql)  
 
 ### Команды
 
 select * from table_name - вернуть всю таблицу
-drop table table_name - удалить таблицу  
+drop table table_name - удалить таблицу
+
 [![up](/image/up.png)](#sql)
 
 ### Консоль
