@@ -13,7 +13,7 @@
 
 ### Команды
 
-select * from table_name - вепнуть всю таблицу
+select * from table_name - вернуть всю таблицу
 drop table table_name - удалить таблицу
 
 ### Консоль
@@ -59,5 +59,5 @@ datetime - зарезевированное имя, вместо него мож
 
 Если таблица не создана, то можно использовать команду:  
 ```
-sqlite3> create table if not exists table_name
+sqlite> create table if not exists table_name
 ```
