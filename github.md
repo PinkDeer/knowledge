@@ -24,7 +24,11 @@ git init
 git status
 git add .
 git commit -am "Your comment"
+
 git remote add orogin https://github.com/<username>/<appname>.git
+# or 
+git remote add origin git@github.com:<username>/<appname>.git
+
 git push -u origin master
 ```
 
