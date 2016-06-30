@@ -26,7 +26,7 @@ git add .
 git commit -am "Your comment"
 
 git remote add orogin https://github.com/<username>/<appname>.git
-# or 
+# or
 git remote add origin git@github.com:<username>/<appname>.git
 
 git push -u origin master
@@ -37,6 +37,12 @@ git push -u origin master
 git fetch --all
 git reset --hard origin/master
 git pull origin master
+```
+#### Отменить изменения
+
+Чтобы вернутя к предыдущей фиксации, если измения еще не зафиксировались, необходимо выполнить следующую команду (с -f флагом, чтобы инициировать перезапись текущих изменений):
+```
+git checkout -f
 ```
 
 [![up](/image/up.png)](#github)
