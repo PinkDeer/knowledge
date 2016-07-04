@@ -4,6 +4,7 @@
 
 
 * [Установка rails](#установка-rails)
+* [Развертывание на Heroku](#Развертывание-на-heroku)
 
 ### Установка rails
 
@@ -48,6 +49,43 @@ sudo apt-get install nodejs
 gem install rails
 rbenv rehash
 rails -v
+```
+
+[![up](/image/up.png)](#rails)
+
+### Развертывание на Heroku
+
+Heroku использует базу данных PostgreSQL (произносится “post-gres-cue-ell”, и часто называется “Postgres”), это означает что нам нужно добавить гем pg  в production окружение для того чтобы позволить Рельсам общаться с Postgres (гем rails_12factor, который Heroku использует для работы со статическими ассетами, такими как изображения и таблицы стилей):
+
+```
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
+```
+
+Опция --without production предотвращает локальную установку любых продакшен-гемов:
+```
+$ bundle install --without production
+```
+Решистрация на Heroku https://signup.heroku.com/identity  
+
+Далее необходимо перейти в каталог с приложением и создать новый поддомен:
+```
+$ cd ~/folder_app
+$ heroku create
+```
+Отправка приложения:
+```
+$ git push heroku master
+```
+Открыть в браузере отправленное приложение:
+```
+$ heroku open
+```
+Переименовать приложение:
+```
+heroku rename new_name
 ```
 
 [![up](/image/up.png)](#rails)
