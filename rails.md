@@ -84,6 +84,10 @@ $ heroku create
 ```
 $ git push heroku master
 ```
+Запуск миграции продакшен базы данных:
+```
+heroku run rake db:migrate
+```
 Открыть в браузере отправленное приложение:
 ```
 $ heroku open
