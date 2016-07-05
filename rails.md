@@ -68,7 +68,12 @@ end
 ```
 $ bundle install --without production
 ```
-Решистрация на Heroku https://signup.heroku.com/identity  
+Регистрация на Heroku: https://signup.heroku.com/identity  
+
+Установка необходимого софта: https://toolbelt.heroku.com/
+```
+wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+```
 
 Далее необходимо перейти в каталог с приложением и создать новый поддомен:
 ```
