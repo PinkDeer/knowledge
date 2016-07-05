@@ -10,5 +10,5 @@
 - [ ] [Bash by Example, Part 3](http://www.funtoo.org/Bash_by_Example,_Part_3)
 - [ ] [Учись программировать](http://www.shokhirev.com/mikhail/ruby/ltp/) _Completed: 5(10)_
 - [ ] [Ruby School](http://rubyschool.us/) _Completed: 26(50)_
-- [ ] [Ruby on Rails Tutorial](http://railstutorial.ru/chapters/4_0/beginning) _Completed: 1(11)_
+- [ ] [Ruby on Rails Tutorial](http://railstutorial.ru/chapters/4_0/beginning) _Completed: 2(11)_
 - [ ] [SQL Задачи и решения](http://sql-tutorial.ru/)
