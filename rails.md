@@ -92,6 +92,10 @@ $ git push heroku master
 ```
 heroku run rake db:migrate
 ```
+Если возникает ошибка _ ▸ ETIMEDOUT: connect ETIMEDOUT 50.19.103.36:5000_ [заблокирован 5000 порт](#http://www.orhancanceylan.com/heroku-run-command-operation-timed-out/) , то необходимо использовать команду:
+```
+$ heroku run:detached rake db:migrate
+```
 Открыть в браузере отправленное приложение:
 ```
 $ heroku open
