@@ -4,6 +4,7 @@
 
 
 * [Установка rails](#установка-rails)
+* [Создание](#Создание)
 * [Развертывание на Heroku](#Развертывание-на-heroku)
 
 ### Установка rails
@@ -57,7 +58,26 @@ rails -v
 
 [![up](/image/up.png)](#rails)
 
+### Создание
+
+---
+
+#### Cоздание нового проекта
+
+```
+$ rails new app_name
+```
+С опцией --skip-test-unit не генерируется директория test, связанная с дефолтным Test::Unit фреймворком.
+```
+$ rails new app_name --skip-test-unit
+```
+
+[![up](/image/up.png)](#rails)
+
+
 ### Развертывание на Heroku
+
+---
 
 Heroku использует базу данных PostgreSQL (произносится “post-gres-cue-ell”, и часто называется “Postgres”), это означает что нам нужно добавить гем pg  в production окружение для того чтобы позволить Рельсам общаться с Postgres (гем rails_12factor, который Heroku использует для работы со статическими ассетами, такими как изображения и таблицы стилей):
 
@@ -92,7 +112,7 @@ $ git push heroku master
 ```
 heroku run rake db:migrate
 ```
-Если возникает ошибка _ ▸ ETIMEDOUT: connect ETIMEDOUT 50.19.103.36:5000_ [заблокирован 5000 порт](#http://www.orhancanceylan.com/heroku-run-command-operation-timed-out/) , то необходимо использовать команду:
+Если возникает ошибка __▸ ETIMEDOUT: connect ETIMEDOUT 50.19.103.36:5000__ [заблокирован 5000 порт](#http://www.orhancanceylan.com/heroku-run-command-operation-timed-out/) , то необходимо использовать команду:
 ```
 $ heroku run:detached rake db:migrate
 ```
