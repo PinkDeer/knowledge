@@ -21,6 +21,18 @@ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libread
 ```
 cd
 git clone git://github.com/sstephenson/rbenv.git .rbenv
+```
+Может появится ошибка:
+```
+fatal: unable to connect to github.com:
+github.com[0: 192.30.252.128]: errno=Connection refused
+```
+Выполнить команду:
+```
+git config --global url."https://".insteadOf git://
+```
+Далее
+```
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >>  ~/.bashrc
 exec $SHELL
@@ -47,7 +59,15 @@ gem install bundler
 sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install nodejs
-
+```
+Если ошибка, то выполнить команды:
+```
+curl -sL https://deb.nodesource.com/setup | sudo bash -  
+sudo apt-get install nodejs  
+sudo apt-get install build-essential  
+```
+Далее
+```
 gem install rails
 or
 gem install rails -v 4.2.6
