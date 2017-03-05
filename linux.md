@@ -4,7 +4,7 @@
 
 #### Заметки
 
-###### Установка видео драйвера Intel
+###### Установка видеодрайвера Intel
 ```
 sudo add-apt-repository ppa:oibaf/graphics-drivers
 sudo apt-get update
