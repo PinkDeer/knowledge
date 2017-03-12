@@ -32,7 +32,7 @@
 #### Ruby
 
 - [ ] [Учись программировать](http://www.shokhirev.com/mikhail/ruby/ltp/) _Completed: 5(10)_
-- [ ] [Head First Изучаем Ruby](https://www.google.ru/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&q=head+first.+%D0%B8%D0%B7%D1%83%D1%87%D0%B0%D0%B5%D0%BC+ruby&*) _Completed: 1(15)_
+- [ ] [Head First Изучаем Ruby](https://www.google.ru/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&q=head+first.+%D0%B8%D0%B7%D1%83%D1%87%D0%B0%D0%B5%D0%BC+ruby&*) _Completed: 2(15)_
 - [ ] [Путь Ruby](https://www.google.ru/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&q=%D0%BF%D1%83%D1%82%D1%8C+%D1%80%D1%83%D0%B1%D0%B8&*)
 
 #### SQL
