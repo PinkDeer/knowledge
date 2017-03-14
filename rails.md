@@ -84,16 +84,76 @@ rails -v
 
 #### Cоздание нового проекта
 
+На примере блога
 ```
-$ rails new app_name
+$ rails new blog
 ```
 С опцией --skip-test-unit не генерируется директория test, связанная с дефолтным Test::Unit фреймворком.
 ```
 $ rails new app_name --skip-test-unit
 ```
+Создание модели Post
+```
+rails generate model Post title:string summary:text body:text
+```
+Миграция
+```
+rake db:migrate
+```
+Создание контроллера Post
+```
+rails g controller posts
+```
+Корневой маршрут *config/routes.rb* c указанием контроллера *posts* и акшена *index*
+```
+Rails.application.routes.draw do
+  root 'posts#index'
+  resources :posts
+end
+
+```
+Проверка маршрута
+```
+rake routes
+```
+Вывести все посты
+```
+class PostsController < ApplicationController
+  def index
+    @posts = Post.all
+  end
+end
+```
+Создать вьюху *index.html.erb* для вывода всех постов (*app/views/posts/*). Вывод только заголовков:
+```
+<h1>Статьи</h1>
+  <% @posts.each do |post| %>
+  <h2><%= post.title  %></h2>
+  <% end %>
+```
+
 
 [![up](/image/up.png)](#rails)
 
+#### Rails console
+
+Отрыть консоль
+```
+rails c
+```
+Выйти из консоли
+```
+exit
+```
+
+Создание на примере блога:
+```
+Post.create(title: 'First title', summary: 'First summary', body: 'First body')
+```
+Посмотреть все посты:
+```
+Post.all
+```
 
 ### Развертывание на Heroku
 
