@@ -104,7 +104,7 @@ rake db:migrate
 ```
 rails g controller posts
 ```
-Корневой маршрут *config/routes.rb* c указанием контроллера *posts* и акшена *index*
+Корневой маршрут root в *config/routes.rb* c указанием контроллера *posts* и акшена *index*
 ```
 Rails.application.routes.draw do
   root 'posts#index'
@@ -131,7 +131,194 @@ end
   <h2><%= post.title  %></h2>
   <% end %>
 ```
+---
+**Черновик**
 
+добавить контроллер
+```
+def show
+    @posts = Post.find(params[:id])
+end
+```
+добавить въюху show.html.erb
+```
+<h1><%= @post.title %></h1>
+<p><%= @post.body %></p>
+```
+
+
+в app/views/layouts/application.html.erb добить ссылку на создание нового поста
+```
+<body>
+  <%= link_to 'Новая статья', new_post_path %>
+  <%= yield %>
+</body>
+```
+
+Добавить экшен для создания новой статьи
+```
+def new
+  @post = Post.new
+end
+```
+
+Добавить вьюху new.html.erb
+```
+<h1>Новая статья</h1>
+<%= render 'form' %>
+```
+
+И поля в форм
+```
+<%= form_for @post do |f| %>
+  <div class="form-control">
+    <%= f.label :title %>
+    <%= f.text_field :title%>
+  </div>
+
+  <div class="form-control">
+    <%= f.label :summary %>
+    <%= f.text_area :summary%>
+  </div>
+
+  <div class="form-control">
+    <%= f.label :body %>
+    <%= f.text_area :body%>
+  </div>
+
+  <div class="form-control">
+    <%= f.submit 'Сохранить' %>
+  </div>
+<% end %>
+```
+
+Добавить экшены для создания поста
+```
+def create
+  @post = Post.new (post_params)
+  if @post.save
+    redirect_to @post
+  else
+   render :new
+  end
+end
+
+private
+
+def post_params
+  params.require(:post).permit(:title, :summary, :body)
+end
+```
+
+Добавить экшен для редактирования
+```
+def edit
+  @post = Post.find(params[:id])
+end
+```
+и вьюху edit.html.erb
+```
+<h1>Редактировать статью</h1>
+<%= render 'form' %>
+```
+
+Добавить
+```
+def update
+  @post = Post.find(params[:id])
+  if @post.update_attributes(post_params)
+    redirect_to @post
+  else
+   render :edit
+  end
+end
+```
+
+в app/views/layouts/application.html.erb добить ссылку на все статьи
+```
+<body>
+  <%= link_to 'Все статьи', posts_path %>
+  <%= link_to 'Новая статья', new_post_path %>
+  <%= yield %>
+</body>
+```
+
+
+Сделать названия статей линками, редактировать index.html
+```
+<h1>Статьи</h1>
+  <% @posts.each do |post| %>
+  <h2><%= link_to post.title, post_path(post) %></h2>
+  <% end %>
+```
+  В show добавить кнопку удаления
+```
+<h1><%= @post.title %></h1>
+<%= link_to 'Изменить', edit_post_path(@post) %>
+<%= link_to 'Удалить', post_path(@post), method: :delete, data: {confirm: 'Вы уверены?' } %>
+<p><%= @post.body %></p>
+```
+
+Добавить экше для удления
+```
+def destroy
+  @post = Post.find(params[:id])
+  @post.destroy
+  redirect_to @post
+end
+```
+Код контроллера на данный момент
+```
+class PostsController < ApplicationController
+  def index
+    @posts = Post.all
+  end
+
+  def show
+    @post = Post.find(params[:id])
+  end
+
+  def new
+    @post = Post.new
+  end
+
+  def create
+    @post = Post.new (post_params)
+    if @post.save
+      redirect_to @post
+    else
+     render :new
+    end
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update_attributes(post_params)
+      redirect_to @post
+    else
+     render :edit
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to @post
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :summary, :body)
+  end
+
+end
+```
+---
 
 [![up](/image/up.png)](#rails)
 
