@@ -46,7 +46,7 @@ dpkg -i /tmp/atom-amd64.deb
 * [copy-path](https://atom.io/packages/copy-path)
 * [pdf-view](https://atom.io/packages/pdf-view)
 * [minimap-highlight-selected](https://atom.io/packages/minimap-highlight-selected)
-* [emmet-atom](https://github.com/emmetio/emmet-atom)
+* [emmet](https://atom.io/packages/emmet)
 * [linter](https://atom.io/packages/linter)
   * [erb](https://atom.io/packages/linter-erb)
   * [css](https://atom.io/packages/linter-csslint)
