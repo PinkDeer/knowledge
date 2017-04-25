@@ -391,6 +391,14 @@ end
 <h2><%= link_to post.title, post_path(post) %></h2>
 
 ```
+Валидация
+Пустые поля:
+```
+class Post < ApplicationRecord
+  validates :title, :summary, :content, presence: true
+end
+
+```
 
 ---
 
