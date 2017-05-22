@@ -30,6 +30,10 @@ sqlite3 basename.sqlite
 ````
 CREATE TABLE "Users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT, "username" TEXT, "phone" TEXT, "datestamp" TEXT, "barber" TEXT, "color" TEXT)
 ```
+Удобно использовать при инициализации приложения:
+````
+CREATE TABLE IF NOT EXISTS "Users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT, "username" TEXT, "phone" TEXT, "datestamp" TEXT, "barber" TEXT, "color" TEXT)
+```
 Для завершения запроса необходимо в конце строчки ставить  символ";"  
 
 Открыть таблицу в консоли
