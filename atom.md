@@ -23,6 +23,12 @@ wget -q https://github.com/atom/atom/releases/latest -O /tmp/latest
 wget --progress=bar -q $(awk -F '[<>]' '/href=".*atom-amd64.deb/ {match($0,"href=\"(.*.deb)\"",a); print "https://github.com/" a[1]} ' /tmp/latest) -O /tmp/atom-amd64.deb --show-progress
 dpkg -i /tmp/atom-amd64.deb
 ```
+Или:
+```
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install atom
+```
 
 [![up](/image/up.png)](#atom)
 
