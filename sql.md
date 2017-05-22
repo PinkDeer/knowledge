@@ -22,6 +22,14 @@ drop table table_name - удалить таблицу
 
 ### Консоль
 
+Сперва необходимо создать БД, далее войти в неё:
+```
+sqlite3 basename.sqlite
+```
+Пример создания таблицы
+````
+CREATE TABLE "Users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT, "username" TEXT, "phone" TEXT, "datestamp" TEXT, "barber" TEXT, "color" TEXT)
+```
 Для завершения запроса необходимо в конце строчки ставить  символ";"  
 
 Открыть таблицу в консоли
@@ -32,7 +40,7 @@ $ sqlite3 databases_name
 ```
 sqlite> .table
 ```
-Визуальная разбивка на стобцы
+Визуальная разбивка на столбцы
 ```
 sqlite> .mode column
 ```
