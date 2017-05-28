@@ -112,7 +112,7 @@ Rails.application.routes.draw do
 end
 
 ```
-Проверка маршрута
+#### Проверка маршрута
 ```
 rake routes
 ```
@@ -137,6 +137,14 @@ end
 rails s -e production
            development (по умолчанию)
            test
+```
+#### Проверка всех полей модели (в rails консоли):
+```
+Modelname.attribute_names
+```
+#### Все записи:
+```
+Modelname.all
 ```
 
 ---
