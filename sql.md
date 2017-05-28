@@ -56,6 +56,11 @@ sqlite> .headers on
 ```
 sqlite> .exit - выход
 ```
+Удалить всё из таблицы:
+```
+delete from tablename
+```
+
 [![up](/image/up.png)](#sql)
 
 ### Полезное
