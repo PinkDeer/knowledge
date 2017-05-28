@@ -131,6 +131,14 @@ end
   <h2><%= post.title  %></h2>
   <% end %>
 ```
+#### Запуск
+
+```
+rails s -e production
+           development (по умолчанию)
+           test
+```
+
 ---
 **Черновик**
 
