@@ -146,6 +146,11 @@ Modelname.attribute_names
 ```
 Modelname.all
 ```
+#### Поиск записи:
+```
+Modelname.find(1)
+```
+
 
 ---
 **Черновик**
