@@ -60,6 +60,10 @@ sqlite> .exit - выход
 ```
 delete from tablename
 ```
+Информация о таблице
+```
+pragma table_info(tablename)
+```
 
 [![up](/image/up.png)](#sql)
 
