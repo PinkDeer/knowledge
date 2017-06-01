@@ -110,8 +110,13 @@ Rails.application.routes.draw do
   root 'posts#index'
   resources :posts
 end
-
 ```
+Создание новой модели принадлежащей другой модели
+```
+rails g model Comment author:string body:text post:references
+```
+
+
 #### Проверка маршрута
 ```
 rake routes
