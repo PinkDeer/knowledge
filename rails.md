@@ -236,6 +236,10 @@ spring/
 ```
 
 
+---
+
+[![up](/image/up.png)](#rails)
+
 ### Развертывание на Heroku
 
 ---
