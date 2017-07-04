@@ -130,6 +130,10 @@ bundle exec rake test
 ```
 rails c
 ```
+Запуск консоли в изолированном режиме
+```
+rails c --sandbox
+```
 Выйти из консоли
 ```
 exit
