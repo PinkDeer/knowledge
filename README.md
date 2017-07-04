@@ -2,6 +2,7 @@
 
 * [Atom](/atom.md)
 * [Bash](bash.md)
+* [CSS](css.md)
 * [Gems](/gems.md)
 * [Github](/github.md)
 * [HTML](/html.md)
