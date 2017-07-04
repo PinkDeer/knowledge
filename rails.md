@@ -235,6 +235,14 @@ end
 spring/
 ```
 
+#### RSpec
+
+
+##### Полезные ссылки
+
+* [Better Specs](#http://betterspecs.org/ru])
+
+
 
 ---
 
