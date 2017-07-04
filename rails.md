@@ -4,9 +4,12 @@
 
 
 * [Установка rails](#установка-rails)
-* [Команды](#Команды)
+* [Команды](#команды)
+* [Rails console](#rails-console)
 * [Тестирование](#Тестирование)
-* [Развертывание на Heroku](#Развертывание-на-heroku)
+  * [TDD](#TDD)
+  * [Интеграционное тестирование](#интеграционное-тестирование)
+* [Развертывание на Heroku](#развертывание-на-heroku)
 
 ### Установка rails
 
@@ -76,8 +79,9 @@ gem install rails -v 4.2.6
 rbenv rehash
 rails -v
 ```
+[![up](/image/up.png)](#(#установка-rails)) _Установка-rails_  
+[![up](/image/up.png)](#rails) _Оглавление_
 
-[![up](/image/up.png)](#rails)
 
 ### Команды
 
@@ -118,13 +122,14 @@ bundle exec rake db:migrate VERSION=0
 ```
 bundle exec rake test
 ```
+[![up](/image/up.png)](#команды) _Команды_  
+[![up](/image/up.png)](#rails) _Оглавление_
+
+
+### Rails console
 
 
 ---
-
-[![up](/image/up.png)](#rails)
-
-#### Rails console
 
 Отрыть консоль
 ```
@@ -147,6 +152,9 @@ Post.create(title: 'First title', summary: 'First summary', body: 'First body')
 ```
 Post.all
 ```
+
+[![up](/image/up.png)](#rails-console) _Rails-console_  
+[![up](/image/up.png)](#rails) _Оглавление_
 
 ### Тестирование
 
@@ -238,8 +246,12 @@ end
 ```
 spring/
 ```
+[![up](/image/up.png)](#тестирование) _Тестирование_  
+[![up](/image/up.png)](#rails) _Оглавление_
+
 
 #### Интеграционное тестирование
+
 
 Интеграционное тестирование позволят проверить поведение приложения в комплексе.
 Пример:
@@ -266,16 +278,13 @@ bundle exec rake test:integration
 
 #### RSpec
 
-
 ##### Полезные ссылки
 
 * [Better Specs](#http://betterspecs.org/ru])
 
 
-
----
-
-[![up](/image/up.png)](#rails)
+[![up](/image/up.png)](#тестирование) _Тестирование_  
+[![up](/image/up.png)](#rails) _Оглавление_
 
 ### Развертывание на Heroku
 
@@ -327,4 +336,7 @@ $ heroku open
 heroku rename new_name
 ```
 
-[![up](/image/up.png)](#rails)
+[![up](/image/up.png)](#Развертывание-на-heroku) _Развертывание на Heroku_  
+[![up](/image/up.png)](#rails) _Оглавление_
+
+[Atom](/atom.md) || [Bash](bash.md) || [CSS](css.md) || [Gems](/gems.md) || [Github](/github.md) || [HTML](html.md) || [jQuery](/jquery.md) || [Linux](/linux.md) || [Rails](rails.md) || [Ruby](ruby.md) || [SQL](sql.md) || [SSH](ssh.md) || [Tasks](tasks.md)
