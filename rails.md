@@ -152,13 +152,53 @@ rails c --sandbox
 exit
 ```
 
-Создание на примере блога:
+Создание объекта:
 ```
-Post.create(title: 'First title', summary: 'First summary', body: 'First body')
+User.new
+# или сразу
+user = User.new(name: "Michael Hartl", email: "mhartl@example.com")
+user.valid? # проверка допустимости
+user.save
+user # проверка созданного объекта
 ```
-Посмотреть все посты:
+Создание в один шаг:
 ```
-Post.all
+User.create(name: "A Nother", email: "another@example.org")
+
+foo = User.create(name: "Foo", email: "foo@bar.com") # присврение переменной
+foo.destroy
+```
+Доступ к атрибутам:
+```
+user.name
+=> "Michael Hartl"
+user.email
+=> "mhartl@example.com"
+user.updated_at
+=> Thu, 24 Jul 2014 00:57:46 UTC +00:00
+```
+Посик объектов:
+```
+User.find(1)
+User.find_by(email: "mhartl@example.com")
+User.first
+User.all
+```
+Обновление объектов:
+```
+user # Просто чтобы вспомнить имеющиеся атрибуты
+>> user.email = "mhartl@example.net"
+"mhartl@example.net"
+>> user.save
+```
+Второй способ обновления:
+```
+user.update_attributes(name: "The Dude", email: "dude@abides.org")
+user.update_attribute(:name, "The Dude") # pdate_attribute - для обновления одного атрубута.
+```
+Провепка объекта _errors_ созданого проверкой:
+```
+user.errors.full_messages
 ```
 [![up](/image/up.png)](#rails)
 
@@ -255,6 +295,123 @@ end
 spring/
 ```
 [![up](/image/up.png)](#rails)
+
+#### Тестирование модели
+
+
+##### email
+
+
+Проверка допустимости, наличия, длины и формата (test/models/user_test.rb):
+```
+require 'test_helper'
+class UserTest < ActiveSupport::TestCase
+  def setup
+    @user = User.new(name: "Example User", email: "user@example.com")
+  end
+  test "should be valid" do # допустимость
+    assert @user.valid?
+  end
+  test "name should be present" do # наличие
+    @user.name = " "
+    assert_not @user.valid?
+  end
+  test "email should be present" do # наличие
+    @user.email = " "
+    assert_not @user.valid?
+  end
+  test "name should not be too long" do # проверка длины
+    @user.name = "a" * 51
+    assert_not @user.valid?
+  end
+  test "email should not be too long" do # проверка длины
+    @user.email = "a" * 244 + "@example.com"
+    assert_not @user.valid?
+  end
+  test "email validation should reject invalid addresses" do # формат email
+   invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
+                          foo@bar_baz.com foo@bar+baz.com]
+   invalid_addresses.each do |invalid_address|
+     @user.email = invalid_address
+     assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
+   end
+   test "email addresses should be unique" do # проверка на уникальность
+    duplicate_user = @user.dup
+    duplicate_user.email = @user.email.upcase
+    @user.save
+    assert_not duplicate_user.valid?
+  end
+ end
+
+end
+```
+Добавить валидацию (user.rb), зеленый тест:
+```
+class User < ActiveRecord::Base
+  before_save { self.email = email.downcase }
+  validates :name, presence: true, length: { maximum: 50 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 255 },
+                    format: { with: VALID_EMAIL_REGEX },
+                    uniqueness: { case_sensitive: false }
+end
+```
+Создание индекса в базе данных для столбца email:
+```
+rails generate migration add_index_to_users_email
+```
+Заполнить db/migrate/[timestamp] add_index_to_users_email.rb:
+```
+class AddIndexToUsersEmail < ActiveRecord::Migration
+  def change
+    add_index :users, :email, unique: true
+  end
+end
+```
+Очичтить test/fixtures/users.yml:
+```
+# пустой
+```
+
+
+##### пароль
+Миграциф:
+```
+rails generate migration add_password_digest_to_users password_digest:string
+```
+Добавить гем:
+```
+gem 'bcrypt',               '3.1.7'
+```
+Добваить в user.rb:
+```
+class User < ActiveRecord::Base
+  before_save { self.email = email.downcase }
+  validates :name, presence: true, length: { maximum: 50 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 255 },
+                    format: { with: VALID_EMAIL_REGEX },
+                    uniqueness: { case_sensitive: false }
+  has_secure_password # новое
+  validates :password, length: { minimum: 6 } # новое
+end
+```
+И изменить setup в test/models/user_test.rb:
+```
+def setup
+  @user = User.new(name: "Example User", email: "user@example.com",
+                     password: "foobar", password_confirmation: "foobar")
+end
+```
+И добавить:
+```
+test "password should have a minimum length" do
+    @user.password = @user.password_confirmation = "a" * 5
+    assert_not @user.valid?
+  end
+```
+
+
 
 
 #### Интеграционное тестирование
