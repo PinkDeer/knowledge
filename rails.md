@@ -6,14 +6,17 @@
 * [Установка rails](#установка-rails)
 * [Команды](#команды)
 * [Rails console](#rails-console)
-* [Тестирование](#Тестирование)
-  * [TDD](#TDD)
+* [Тестирование](#тестирование)
+  * [TDD](#tdd)
   * [Интеграционное тестирование](#интеграционное-тестирование)
+  * [RSpec](#rspec)
 * [Развертывание на Heroku](#развертывание-на-heroku)
 
 ### Установка rails
 
+
 ---
+
 
 #### Первоначальная настройка системы
 
@@ -21,7 +24,9 @@
 sudo apt-get update
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 ```
+
 #### Установка rbenv и ruby
+
 ```
 cd
 git clone git://github.com/sstephenson/rbenv.git .rbenv
@@ -51,12 +56,14 @@ rbenv install 2.3.1
 rbenv global 2.3.1
 ruby -v
 ```
+
 #### Установка bundler
 
 ```
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 gem install bundler
 ```
+
 #### Установка rails
 
 ```
@@ -79,15 +86,16 @@ gem install rails -v 4.2.6
 rbenv rehash
 rails -v
 ```
-[![up](/image/up.png)](#(#установка-rails)) _Установка-rails_  
-[![up](/image/up.png)](#rails) _Оглавление_
+[![up](/image/up.png)](#rails)
 
 
 ### Команды
 
+
 ---
 
-Создание нового приложении используz опреленную версию rails:
+
+Создание нового приложении используя опреленную версию rails:
 ```
 rails _4.2.0_ new sample_app
 ```
@@ -123,13 +131,13 @@ bundle exec rake db:migrate VERSION=0
 bundle exec rake test
 ```
 [![up](/image/up.png)](#команды) _Команды_  
-[![up](/image/up.png)](#rails) _Оглавление_
 
 
 ### Rails console
 
 
 ---
+
 
 Отрыть консоль
 ```
@@ -152,18 +160,18 @@ Post.create(title: 'First title', summary: 'First summary', body: 'First body')
 ```
 Post.all
 ```
+[![up](/image/up.png)](#rails)
 
-[![up](/image/up.png)](#rails-console) _Rails-console_  
-[![up](/image/up.png)](#rails) _Оглавление_
 
 ### Тестирование
 
+
 ---
+
 
 #### TDD
 
-
-Запуск тестиования
+Запуск тестирования
 ```
 bundle exec rake test
 ```
@@ -246,12 +254,10 @@ end
 ```
 spring/
 ```
-[![up](/image/up.png)](#тестирование) _Тестирование_  
-[![up](/image/up.png)](#rails) _Оглавление_
+[![up](/image/up.png)](#rails)
 
 
 #### Интеграционное тестирование
-
 
 Интеграционное тестирование позволят проверить поведение приложения в комплексе.
 Пример:
@@ -278,17 +284,20 @@ bundle exec rake test:integration
 
 #### RSpec
 
+
 ##### Полезные ссылки
 
 * [Better Specs](#http://betterspecs.org/ru])
 
 
-[![up](/image/up.png)](#тестирование) _Тестирование_  
-[![up](/image/up.png)](#rails) _Оглавление_
+[![up](/image/up.png)](#rails)
+
 
 ### Развертывание на Heroku
 
+
 ---
+
 
 Heroku использует базу данных PostgreSQL (произносится “post-gres-cue-ell”, и часто называется “Postgres”), это означает что нам нужно добавить гем pg  в production окружение для того чтобы позволить Рельсам общаться с Postgres (гем rails_12factor, который Heroku использует для работы со статическими ассетами, такими как изображения и таблицы стилей):
 
@@ -335,8 +344,7 @@ $ heroku open
 ```
 heroku rename new_name
 ```
+[![up](/image/up.png)](#rails)
 
-[![up](/image/up.png)](#Развертывание-на-heroku) _Развертывание на Heroku_  
-[![up](/image/up.png)](#rails) _Оглавление_
 
 [Atom](/atom.md) || [Bash](bash.md) || [CSS](css.md) || [Gems](/gems.md) || [Github](/github.md) || [HTML](html.md) || [jQuery](/jquery.md) || [Linux](/linux.md) || [Rails](rails.md) || [Ruby](ruby.md) || [SQL](sql.md) || [SSH](ssh.md) || [Tasks](tasks.md)
