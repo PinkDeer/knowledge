@@ -196,8 +196,9 @@ user # Просто чтобы вспомнить имеющиеся атриб�
 ```
 Второй способ обновления:
 ```
+user = User.first
 user.update_attributes(name: "The Dude", email: "dude@abides.org")
-user.update_attribute(:name, "The Dude") # pdate_attribute - для обновления одного атрубута.
+user.update_attribute(:name, "The Dude") # update_attribute - для обновления одного атрубута.
 ```
 Провепка объекта _errors_ созданого проверкой:
 ```
