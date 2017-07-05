@@ -126,6 +126,10 @@ bundle exec rake db:rollback
 ```
 bundle exec rake db:migrate VERSION=0
 ```
+Очистить базу данных:
+```
+bundle exec rake db:migrate:reset
+```
 Запуск теста:
 ```
 bundle exec rake test
@@ -200,7 +204,7 @@ user = User.first
 user.update_attributes(name: "The Dude", email: "dude@abides.org")
 user.update_attribute(:name, "The Dude") # update_attribute - для обновления одного атрубута.
 ```
-Провепка объекта _errors_ созданого проверкой:
+Проверка объекта _errors_ созданного проверкой:
 ```
 user.errors.full_messages
 ```
