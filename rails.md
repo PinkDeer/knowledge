@@ -130,6 +130,8 @@ bundle exec rake db:migrate VERSION=0
 ```
 bundle exec rake test
 ```
+
+
 [![up](/image/up.png)](#команды) _Команды_  
 
 
@@ -183,6 +185,7 @@ User.find(1)
 User.find_by(email: "mhartl@example.com")
 User.first
 User.all
+User.count
 ```
 Обновление объектов:
 ```
@@ -200,6 +203,38 @@ user.update_attribute(:name, "The Dude") # pdate_attribute - для обновл
 ```
 user.errors.full_messages
 ```
+
+#### Окружение
+```
+$ rails console
+Loading development environment
+>> Rails.env
+=> "development"
+>> Rails.env.development?
+=> true
+>> Rails.env.test?
+=> false
+```
+Запуск в тестовом окружении:
+```
+$ rails console test Loading test environment
+>> Rails.env
+=> "test"
+>> Rails.env.test?
+=> true
+```
+Чтобы запустить rails в промышленном окружении необходимо настроить базы данных:
+```
+bundle exec rake db:migrate RAILS_ENV=production
+rails server --environment production
+```
+Проверка окружения на heroku
+```
+$ heroku run console
+>> Rails.env
+=> "production"
+```
+
 [![up](/image/up.png)](#rails)
 
 
