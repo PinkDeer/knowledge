@@ -28,7 +28,7 @@
 - [x] [12 In 12 Challenge](https://mackenziechild.me/12-in-12/) _Completed: 12(12)_
 - [ ] [Dev Simple](https://www.youtube.com/channel/UCzBDZvjXprwp4nG9qgbudKA) _Completed: 1(13)_
 - [ ] [Ruby School](http://rubyschool.us/) _Completed: 43(50)_
-- [ ] [Ruby on Rails Tutorial](https://www.railstutorial.org/) _Completed: 5(11)_
+- [ ] [Ruby on Rails Tutorial](https://www.railstutorial.org/) _Completed: 7(11)_
 
 #### Ruby
 
