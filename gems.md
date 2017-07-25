@@ -5,6 +5,8 @@
 
 #### [rubygems.org](https://rubygems.org/)
 
+* [activeadmin](https://rubygems.org/gems/activeadmin)
+* [active_skin](https://rubygems.org/gems/active_skin)
 * [better_errors](https://rubygems.org/gems/better_errors)
 * [bootstrap-sass](https://rubygems.org/gems/bootstrap-sass)
 * [devise](https://rubygems.org/gems/devise)
