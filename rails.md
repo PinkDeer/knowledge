@@ -87,7 +87,7 @@ rbenv rehash
 rails -v
 ```
 
-#### Обновление списка доспных версии Ruby
+#### Обновление списка доступных версии Ruby
 ```
 cd ~/.rbenv/plugins/ruby-build
 git pull
