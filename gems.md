@@ -6,6 +6,7 @@
 #### [rubygems.org](https://rubygems.org/)
 
 * [activeadmin](https://rubygems.org/gems/activeadmin)
+    * [activeadmin-themes](https://github.com/paladini/activeadmin-themes))
 * [active_skin](https://rubygems.org/gems/active_skin)
 * [better_errors](https://rubygems.org/gems/better_errors)
 * [bootstrap-sass](https://rubygems.org/gems/bootstrap-sass)
