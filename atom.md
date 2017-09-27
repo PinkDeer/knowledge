@@ -53,6 +53,7 @@ sudo apt-get install atom
 * [pdf-view](https://atom.io/packages/pdf-view)
 * [minimap-highlight-selected](https://atom.io/packages/minimap-highlight-selected)
 * [emmet](https://atom.io/packages/emmet)
+* [lorem](https://atom.io/packages/lorem)
 * [linter](https://atom.io/packages/linter)
   * [erb](https://atom.io/packages/linter-erb)
   * [css](https://atom.io/packages/linter-csslint)
