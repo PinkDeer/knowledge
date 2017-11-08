@@ -5,7 +5,7 @@
 #### HTML
 
 - [x] [HTML5 для начинающих](http://www.magisters.org/education/course/html5-for-beginners) _Completed: 16(16)_
-- [x] [HTML5. Недостающее руководство](https://www.google.ru/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=html5+%D0%BD%D0%B5%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%8E%D1%89%D0%B5%D0%B5+%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE&*) _Completed: 14(14)_
+- [x] [HTML5. Недостающее руководство](https://www.ozon.ru/context/detail/id/18060929/?partner=deals9) _Completed: 14(14)_
 
 #### CSS
 
