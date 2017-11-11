@@ -15,7 +15,7 @@
 
 #### JS
 
-- [ ] [JavaScript для детей. Самоучитель по программированию](https://www.ozon.ru/context/detail/id/138148848/?partner=deals99) _Completed: 2(17)_
+- [ ] [JavaScript для детей. Самоучитель по программированию](https://www.ozon.ru/context/detail/id/138148848/?partner=deals99) _Completed: 6(17)_
 - [ ] [Современный учебник Javascript](http://learn.javascript.ru/)
 
 #### Bash
