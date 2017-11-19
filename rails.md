@@ -540,6 +540,10 @@ heroku run rake db:migrate
 ```
 $ heroku run:detached rake db:migrate
 ```
+Сброс базы данных (после снова запустить миграцию heroku run rake db:migrate):
+```
+heroku pg:reset DATABASE
+```
 Открыть в браузере отправленное приложение:
 ```
 $ heroku open
