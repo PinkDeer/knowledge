@@ -141,7 +141,10 @@ bundle exec rake db:migrate:reset
 ```
 bundle exec rake test
 ```
-
+Очистка кеша:
+```
+rake tmp:cache:clear
+```
 
 [![up](/image/up.png)](#команды) _Команды_  
 
