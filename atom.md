@@ -12,7 +12,7 @@
 
 ---
 
-* File -> Setting -> uncheck "Open Empty Editor On Start"
+* Edit -> Preferences -> uncheck "Open Empty Editor On Start"
 * Project Home: /home/...
 * Packages -> Core Packages -> autosave -> Setting -> check "Enabled"
 
@@ -48,6 +48,7 @@ sudo apt-get install atom
 * [Open Recent](https://atom.io/packages/open-recent)
 * [Highlight Selected](https://atom.io/packages/highlight-selected)
 * [autoclose-html](https://atom.io/packages/autoclose-html)
+* [autocomplete-paths](https://atom.io/packages/autocomplete-paths)
 * [color-picker](https://atom.io/packages/color-picker)
 * [copy-path](https://atom.io/packages/copy-path)
 * [pdf-view](https://atom.io/packages/pdf-view)
