@@ -137,6 +137,10 @@ bundle exec rake db:migrate VERSION=0
 ```
 bundle exec rake db:migrate:reset
 ```
+Удалить колонку из таблицы
+```
+rails d migration remove_columnname_from_tablename columnname:type
+```
 Запуск теста:
 ```
 bundle exec rake test
