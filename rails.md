@@ -559,6 +559,14 @@ $ heroku open
 ```
 heroku rename new_name
 ```
+Список приложений
+```
+heroku run rake db:migrate
+```
+Выбрать приложение
+```
+heroku git:remote -a MyHerokuAppName
+```
 [![up](/image/up.png)](#rails)
 
 
