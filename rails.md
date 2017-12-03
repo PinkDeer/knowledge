@@ -149,6 +149,10 @@ bundle exec rake test
 ```
 rake tmp:cache:clear
 ```
+Удалить колонку Country из таблицы SampleApps:
+```
+rails g migration RemoveCountryFromSampleApps country:string
+```
 
 [![up](/image/up.png)](#команды) _Команды_  
 
