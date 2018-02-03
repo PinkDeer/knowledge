@@ -15,6 +15,7 @@
 * [wildcards](#wildcards)
 * [kill](#kill)
 * [wget](#wget)
+* [chmod](#chmod)
 
 > Большинство команд Linux могут быть запущены с параметром  "--help"
 >
@@ -508,6 +509,15 @@ wget - программа для скачивная файлов
 Если возникает проблема  сертифинатом, то использовать опцию
 ```
 wget  --no-check-certificate https://randomsite.ru
+```
+
+### wget
+
+---
+
+Смена прав у директорий (рекурсивно)
+```
+chmod -R 777 folder
 ```
 
 [![up](/image/up.png)](#bash)
