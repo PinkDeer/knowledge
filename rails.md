@@ -559,6 +559,11 @@ heroku pg:reset DATABASE
 ```
 $ heroku open
 ```
+Посмотреть логи:
+```
+heroku logs
+heroku logs -t # в реальном времени
+```
 Переименовать приложение:
 ```
 heroku rename new_name
