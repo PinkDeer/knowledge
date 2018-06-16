@@ -226,6 +226,17 @@ user.update_attribute(:name, "The Dude") # update_attribute - для обнов�
 ```
 user.errors.full_messages
 ```
+Создание переменной:
+```
+@var=User.find(2)
+@var.name
+@var.name="Tom"
+@var.save
+```
+Поиск по атрибуту:
+```
+User.find_by_name:"Tom"
+```
 
 #### Окружение
 ```
