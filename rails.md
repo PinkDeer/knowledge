@@ -237,6 +237,10 @@ user.errors.full_messages
 ```
 User.find_by_name:"Tom"
 ```
+Удалить все записи:
+```
+User.destroy_all
+```
 
 #### Окружение
 ```
