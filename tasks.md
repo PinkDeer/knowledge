@@ -38,6 +38,7 @@
 - [ ] [Ruby School](http://rubyschool.us/) _Completed: 43(50)_
 - [ ] [Ruby on Rails Tutorial](https://www.railstutorial.org/) _Completed: 8(11)_
 - [x] [How To Build A Blog Using Rails 5](https://www.youtube.com/watch?v=i2x995hm8r8) _Completed: 1(1)_
+- [x] [EasyRails](http://www.easyrails.ru/) _Completed: 42(42)_
 
 #### SQL
 
