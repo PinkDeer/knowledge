@@ -599,6 +599,75 @@ heroku rename new_name
 ```
 heroku git:remote -a MyHerokuAppName
 ```
+
+#### Подтверждение регистрации development и production на Heroku (Rails 5.2)
+
+.gitignore
+```
+config/master.key
+```
+В модель user.rb добавить модуль :confirmable
+```
+devise :recoverable, :rememberable, :trackable, :validatable, :confirmable
+```
+Редактировать config/initializers/devise.rb
+```
+config.reconfirmable = false
+```
+Добавить гем letter_opener
+```
+group :development
+  gem 'letter_opener`
+end
+```
+Редактировать config/environments/development.rb
+```
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
++  config.action_mailer.delivery_method = :letter_opener
++  config.action_mailer.smtp_settings = {
++  address:              'smtp.gmail.com',
++  port:                 587,
++  domain:               'example.com',
++  user_name:            Rails.application.credentials.development[:aws][:user_name],
++  password:             Rails.application.credentials.development[:aws][:password],
++  authentication:       'plain',
++  enable_starttls_auto: true }
+```
+Редактировать config/environments/production.rb
+```
+config.action_mailer.default_url_options = { host: 'example.com'}
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+address:              'smtp.gmail.com',
+port:                 587,
+domain:               'example.com',
+user_name:            Rails.application.credentials.production[:aws][:user_name],
+password:             Rails.application.credentials.production[:aws][:password],
+authentication:       'plain',
+enable_starttls_auto: true }
+```
+??? Редактировать config/environments/production.rb
+```
+config.require_master_key = true
+```
+Открыть config/credentials.yml.enc
+```
+EDITOR="atom --wait" bin/rails credentials:edit
+```
+Отредактировать
+```
+development:
+  aws:
+    user_name: xxx
+    password: yyy
+production:
+  aws:
+    user_name: xxx
+    password: yyy
+```
+В настройках приложения на сайте Хероку в разделе "Reveal Config Vars" добавить переменную RAILS_MASTER_KEY, значение скопировать из config/master.key.
+
+
 [![up](/image/up.png)](#rails)
 
 
