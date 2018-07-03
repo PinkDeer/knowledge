@@ -91,7 +91,9 @@ rails -v
 ```
 cd ~/.rbenv/plugins/ruby-build
 git pull
-```
+```# README
+
+Lessonm
 
 [![up](/image/up.png)](#rails)
 
@@ -223,7 +225,9 @@ user.update_attributes(name: "The Dude", email: "dude@abides.org")
 user.update_attribute(:name, "The Dude") # update_attribute - для обновления одного атрубута.
 ```
 Проверка объекта _errors_ созданного проверкой:
-```
+```# README
+
+Lessonm
 user.errors.full_messages
 ```
 Создание переменной:
@@ -574,6 +578,10 @@ heroku pg:reset DATABASE
 ```
 $ heroku open
 ```
+Перезагрузить сайт:
+```
+heroku restart
+```
 Посмотреть логи:
 ```
 heroku logs
@@ -585,7 +593,7 @@ heroku rename new_name
 ```
 Список приложений
 ```
-heroku run rake db:migrate
+---
 ```
 Выбрать приложение
 ```
