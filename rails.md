@@ -11,6 +11,8 @@
   * [Интеграционное тестирование](#интеграционное-тестирование)
   * [RSpec](#rspec)
 * [Развертывание на Heroku](#развертывание-на-heroku)
+  * [Подтверждение регистрации development и production на Heroku (Rails 5.2)](#подтверждение-регистрации-development-и-production-на-heroku-(Rails-5.2))
+* [Делой на VPS](#делой на-vps)
 
 ### Установка rails
 
@@ -667,6 +669,43 @@ production:
 ```
 В настройках приложения на сайте Хероку в разделе "Reveal Config Vars" добавить переменную RAILS_MASTER_KEY, значение скопировать из config/master.key.
 
+
+### Делой на VPS
+
+
+---
+
+Подключение по ssh:
+```
+shh root@host
+```
+Установка nano, если ент на сервере:
+```
+sudo apt-get install nano
+```
+Изменить пароль суперпользователя:
+```
+sudo passwd root
+```
+Создание нового пользователя
+```
+sudo adduser deploy
+sudo adduser deploy sudo
+su deploy
+```
+
+Информацию о текущем языковом окружении:
+```
+locale
+```
+Список всех установленных языков и кодировок:
+```
+locale -a
+```
+Сгенерироват нужную локаль, например:
+```
+sudo locale-gen ru_RU.UTF-8
+```
 
 [![up](/image/up.png)](#rails)
 
