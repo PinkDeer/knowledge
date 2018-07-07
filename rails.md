@@ -706,6 +706,122 @@ locale -a
 ```
 sudo locale-gen ru_RU.UTF-8
 ```
+Настройки для pg баз данных с поддержкой русского языка:
+```
+sudo nano /etc/environment
+```
+```
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+LANGUAGE=en_US.UTF-8
+LANG=en_US.UTF-8
+LC_ALL=ru_RU.UTF-8
+LC_COLLATE=ru_RU.UTF-8
+LC_TIME=en_US.UTF-8
+```
+Часовой пояс сервера:
+```
+timedatectl
+```
+Выбор часового пояса:
+```
+sudo dpkg-reconfigure tzdata
+```
+##### Установка ruby:
+```
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+sudo apt-get update
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs yarn
+
+cd
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+exec $SHELL
+
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+exec $SHELL
+
+rbenv install 2.5.1
+rbenv global 2.5.1
+ruby -v
+
+gem install bundler
+```
+##### Установка Nginx:
+```
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
+sudo apt-get install -y apt-transport-https ca-certificates
+
+# Add Passenger APT repository
+sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger xenial main > /etc/apt/sources.list.d/passenger.list'
+sudo apt-get update
+
+# Install Passenger & Nginx
+sudo apt-get install -y nginx-extras passenger
+```
+Команды Nginx:
+```
+sudo service nginx start
+sudo service nginx stop
+sudo service nginx restart
+```
+В файл /etc/nginx/nginx.conf добавить:
+```
+# sudo nano /etc/nginx/nginx.conf
+include /etc/nginx/passenger.conf;
+```
+В файле /etc/nginx/passenger.conf изменить строку passenger_ruby... на:
+```
+# sudo nano /etc/nginx/passenger.conf
+passenger_ruby /home/deploy/.rbenv/shims/ruby;
+```
+##### Установка postgres:
+```
+sudo apt-get install postgresql postgresql-contrib libpq-dev
+```
+В файле /etc/postgresql/9.5/main/pg_hba.conf не должна быть закомментирована строка (любой пользователь по паролю может получить достун к любой базе данных):
+```
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+```
+Изменить unix пользователя па пользователя postgres:
+```
+sudo su - postgres
+```
+Далее работа идёт от имень пользователя postgres.
+###### Консоль доступа к базе данных:
+```
+psql
+```
+Список текущих пользователей:
+```
+\dg
+```
+Создание нового юзера:
+```
+create user username with password 'password'
+```
+Список текущих баз:
+```
+\l
+```
+Создать базу данных:
+```
+create database "db_name_prod" with owner = username;
+```
+Выход из консоли:
+```
+\q
+```
+Проверить доступ к базе:
+```
+psql -h localhost -U username -W db_name_prod
+```
+Снова выход из консоли psql ```\q```, затем выход из пользователя postgres ```exit```.
 
 [![up](/image/up.png)](#rails)
 
