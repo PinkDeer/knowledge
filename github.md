@@ -72,6 +72,17 @@ $ git branch -d new_branch
 ```
 Можете отказаться от изменений, относящихся к рабочей ветке, в таком случае использовать git branch -D. В отличие от флага -d, флаг -D сотрет ветку даже если мы не объединили изменения.
 
+
+Удаление файла из репозиатория:
+```
+git rm file_path --cached
+```
+Удалить файл из истории git:
+```
+git filter-branch --tree-filter 'rm -f file_path' HEAD
+git push origin --force --all
+```
+
 ####  Переименовение
 ```
 $ git mv README.rdoc README.md
