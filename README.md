@@ -4,7 +4,7 @@
 * [Bash](bash.md)
 * [CSS](css.md)
 * [Gems](/gems.md)
-* [Github](/github.md)
+* [Git](/git.md)
 * [HTML](/html.md)
 * [jQuery](/jquery.md)
 * [Linux](/linux.md)
