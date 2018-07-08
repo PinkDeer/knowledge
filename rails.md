@@ -677,7 +677,11 @@ production:
 
 Подключение по ssh:
 ```
-shh root@host
+shh root@ipaddress
+```
+На локальной машине:
+```
+ssh-copy-id deploy@ipaddress
 ```
 Установка nano, если ент на сервере:
 ```
@@ -693,7 +697,6 @@ sudo adduser deploy
 sudo adduser deploy sudo
 su deploy
 ```
-
 Информацию о текущем языковом окружении:
 ```
 locale
@@ -726,7 +729,7 @@ timedatectl
 ```
 sudo dpkg-reconfigure tzdata
 ```
-##### Установка ruby:
+#### Установка ruby:
 ```
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -751,7 +754,7 @@ ruby -v
 
 gem install bundler
 ```
-##### Установка Nginx:
+#### Установка Nginx:
 ```
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
 sudo apt-get install -y apt-transport-https ca-certificates
@@ -779,7 +782,7 @@ include /etc/nginx/passenger.conf;
 # sudo nano /etc/nginx/passenger.conf
 passenger_ruby /home/deploy/.rbenv/shims/ruby;
 ```
-##### Установка postgres:
+#### Установка postgres:
 ```
 sudo apt-get install postgresql postgresql-contrib libpq-dev
 ```
@@ -788,7 +791,7 @@ sudo apt-get install postgresql postgresql-contrib libpq-dev
 # IPv4 local connections:
 host    all             all             127.0.0.1/32            md5
 ```
-Изменить unix пользователя па пользователя postgres:
+Изменить unix пользователя на пользователя postgres:
 ```
 sudo su - postgres
 ```
@@ -823,6 +826,97 @@ psql -h localhost -U username -W db_name_prod
 ```
 Снова выход из консоли psql ```\q```, затем выход из пользователя postgres ```exit```.
 
+#### Настройка Сapistrano
+
+Добавить гемы:
+```
+group :development do
+  gem 'capistrano',            '3.11'
+  gem 'capistrano-rails',      '1.4'
+  gem 'capistrano-passenger',  '0.2.0'
+  gem 'capistrano-rbenv',      '2.1.3'
+  gem '
+```
+Запустить команду:
+```
+cap install STAGES=production
+```
+Редактировать Capfile:
+```
+require 'capistrano/rails'
+require 'capistrano/passenger'
+require 'capistrano/rbenv'
+require 'capistrano/bundler'
+set :rbenv_type, :user
+set :rbenv_ruby, '2.5.1'
+```
+Редактировать config/deploy.rb:
+```
+lock "3.11.0"
+
+set :application, "app_name"
+set :repo_url, "git@github.com:app_name.git"
+
+set :deploy_to, '/home/deploy/apps/app_name'
+
+append :linked_files, "config/database.yml", "config/credentials.yml.enc", "config/master.key"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
+```
+Редактировать config/deploy/production.rb
+```
+server 'app_name.ru', user: 'deploy', roles: %w{app db web}
+```
+Удаляем конфиг:
+```
+sudo rm /etc/nginx/sites-available/default
+```
+Создаем новый конфиг
+```
+sudo nano /etc/nginx/sites-available/app_name.conf
+```
+```
+server {
+        listen 80;
+        listen [::]:80 ipv6only=on;
+
+        server_name app_name.ru;
+        access_log /var/log/nginx/app_name/access.log;
+        error_log  /var/log/nginx/app_name/error.log;
+
+        passenger_enabled on;
+        rails_env    production;
+        root         /home/deploy/apps/app_name/current/public;
+
+        # redirect server error pages to the static page /50x.html
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+}
+```
+Создаем ссылку на файл, чтобы при перезагрузке nginx подхватил конфиг:
+```
+sudo ln -s /etc/nginx/sites-available/app_name.conf /etc/nginx/sites-enabled/app_name.conf
+```
+Перезагружаем Nginx:
+```
+sudo service nginx restart
+```
+Список всех команд capistrano
+```
+cap -T
+cap -D # c подробным описанием
+```
+Запуск деплоя:
+```
+cap production deploy
+```
+Скопировать на сервер:
+```
+scp config/database.yml deploy@ipaddress:/home/deploy/apps/app_name/shared/config/database.yml
+scp config/credentials.yml.enc deploy@ipaddress:/home/deploy/apps/app_name/shared/config/credentials.yml.enc
+scp config/master.key deploy@ipaddress:/home/deploy/apps/app_name/shared/config/master.key
+```
 [![up](/image/up.png)](#rails)
 
 
