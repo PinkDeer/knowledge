@@ -677,13 +677,9 @@ production:
 
 Подключение по ssh:
 ```
-shh root@ipaddress
+ssh root@ipaddress
 ```
-На локальной машине:
-```
-ssh-copy-id deploy@ipaddress
-```
-Установка nano, если ент на сервере:
+Установка nano, если нет на сервере:
 ```
 sudo apt-get install nano
 ```
@@ -696,6 +692,10 @@ sudo passwd root
 sudo adduser deploy
 sudo adduser deploy sudo
 su deploy
+```
+На локальной машине:
+```
+ssh-copy-id deploy@ipaddress
 ```
 Информацию о текущем языковом окружении:
 ```
@@ -754,6 +754,9 @@ ruby -v
 
 gem install bundler
 ```
+```
+rbenv rehash
+```
 #### Установка Nginx:
 ```
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
@@ -784,7 +787,14 @@ passenger_ruby /home/deploy/.rbenv/shims/ruby;
 ```
 #### Установка postgres:
 ```
+# 9.5
 sudo apt-get install postgresql postgresql-contrib libpq-dev
+
+# 9.6
+sudo add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -sc)-pgdg main"
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install postgresql-9.6
 ```
 В файле /etc/postgresql/9.5/main/pg_hba.conf не должна быть закомментирована строка (любой пользователь по паролю может получить достун к любой базе данных):
 ```
@@ -795,7 +805,7 @@ host    all             all             127.0.0.1/32            md5
 ```
 sudo su - postgres
 ```
-Далее работа идёт от имень пользователя postgres.
+Далее работа идёт от имени пользователя postgres.
 ##### Консоль доступа к базе данных:
 ```
 psql
@@ -806,7 +816,7 @@ psql
 ```
 Создание нового юзера:
 ```
-create user username with password 'password'
+create user username with password 'password';
 ```
 Список текущих баз:
 ```
