@@ -890,8 +890,8 @@ server {
         listen [::]:80 ipv6only=on;
 
         server_name app_name.ru;
-        access_log /var/log/nginx/app_name/access.log;
-        error_log  /var/log/nginx/app_name/error.log;
+        # access_log /var/log/nginx/app_name/access.log;
+        # error_log  /var/log/nginx/app_name/error.log;
 
         passenger_enabled on;
         rails_env    production;
@@ -912,10 +912,18 @@ sudo ln -s /etc/nginx/sites-available/app_name.conf /etc/nginx/sites-enabled/app
 ```
 sudo service nginx restart
 ```
+Логи nginx:
+```
+sudo nano /var/log/nginx/access.log   
+sudo nano /var/log/nginx/error.log
+```
 Список всех команд capistrano
 ```
 cap -T
 cap -D # c подробным описанием
+```
+```
+nginx -t
 ```
 Запуск деплоя:
 ```
