@@ -768,10 +768,6 @@ sudo apt-get update
 
 # Install Passenger & Nginx
 sudo apt-get install -y nginx-extras passenger
-
-# Configuration file '/etc/nginx/nginx.conf'
-# What would you like to do about it ?  Your options are:
-# Y
 ```
 Команды Nginx:
 ```
