@@ -768,6 +768,10 @@ sudo apt-get update
 
 # Install Passenger & Nginx
 sudo apt-get install -y nginx-extras passenger
+
+# Configuration file '/etc/nginx/nginx.conf'
+# What would you like to do about it ?  Your options are:
+# Y
 ```
 Команды Nginx:
 ```
@@ -775,10 +779,14 @@ sudo service nginx start
 sudo service nginx stop
 sudo service nginx restart
 ```
-В файл /etc/nginx/nginx.conf добавить:
+В файл /etc/nginx/nginx.conf:
 ```
 # sudo nano /etc/nginx/nginx.conf
+
+# Раскомментировать
 include /etc/nginx/passenger.conf;
+# Закомментировать
+# include /etc/nginx/conf.d/*.conf;
 ```
 В файле /etc/nginx/passenger.conf изменить строку passenger_ruby... на:
 ```
