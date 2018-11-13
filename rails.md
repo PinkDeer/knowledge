@@ -10,6 +10,7 @@
   * [TDD](#tdd)
   * [Интеграционное тестирование](#интеграционное-тестирование)
   * [RSpec](#rspec)
+* [Полезные команды](#полезные-команды)
 * [Развертывание на Heroku](#развертывание-на-heroku)
   * [Подтверждение регистрации development и production на Heroku (Rails 5.2)](#подтверждение-регистрации-development-и-production-на-heroku-(Rails-5.2))
 * [Делой на VPS](#делой на-vps)
@@ -490,8 +491,12 @@ test "password should have a minimum length" do
   end
 ```
 
+#### Полезные команды
 
-
+Все доступные задачи Rake
+```
+bundle exec rake -T
+```
 
 #### Интеграционное тестирование
 
