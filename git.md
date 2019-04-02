@@ -1,14 +1,6 @@
-[Atom](/atom.md) || [Bash](bash.md) || [CSS](css.md) || [Gems](/gems.md) || [Git](/git.md) || [HTML](html.md) || [jQuery](/jquery.md) || [Linux](/linux.md) || [Rails](rails.md) || [Ruby](ruby.md) || [SQL](sql.md) || [SSH](ssh.md) || [Tasks](tasks.md)
-
 ## Github
 
-
-* [Команды](#команды)
-* [Markdown](#markdown)
-
 ### Команды
-
----
 
 #### Первоначальная настройка системы
 
@@ -42,7 +34,7 @@ git pull origin master
 ```
 #### Отменить изменения
 
-Чтобы вернутя к предыдущей фиксации, если измения еще не зафиксировались, необходимо выполнить следующую команду (с -f флагом, чтобы инициировать перезапись текущих изменений):
+Чтобы вернутcя к предыдущей фиксации, если измения еще не зафиксировались, необходимо выполнить следующую команду (с -f флагом, чтобы инициировать перезапись текущих изменений):
 ```
 git checkout -f
 ```
@@ -52,7 +44,7 @@ git checkout -f
 ```
 $ git checkout -b new_branch
 ```
-Перечисление всех локальных веток. Звездочка * указывает, какая ветка в настоящий момент включена.
+Перечисление всех локальных веток. Звездочка * указывает, какая ветка в настоящий момент включена
 ```
 $ git branch
 master
@@ -88,9 +80,6 @@ git push origin --force --all
 $ git mv README.rdoc README.md
 ```
 
-[![up](/image/up.png)](#github)
-
-
 ### Markdown
 
 ---
@@ -98,5 +87,3 @@ $ git mv README.rdoc README.md
 * [О markdown](https://help.github.com/articles/about-writing-and-formatting-on-github/)
 * [Базовый синтаксис](https://help.github.com/articles/basic-writing-and-formatting-syntax/)|[Примеры](https://learn.getgrav.org/content/markdown)
 * [Редактор](https://jbt.github.io/markdown-editor/)|[Редактор2](https://stackedit.io/editor#)
-
-[![up](/image/up.png)](#github)
