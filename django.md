@@ -34,3 +34,17 @@ django-admin startproject projectname
 cd projectname
 python manage.py startapp appname
 ```
+Запуск сервера
+```
+./manage.py runserver
+# по умолчанию 8000 порт, можно указать явно другой
+# ./manage.py runserver 5000
+```
+Или другой командой
+```
+python manage.py runserver
+```
+Применение миграций
+```
+./manage.py migrate
+```
