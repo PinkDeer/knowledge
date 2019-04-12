@@ -75,14 +75,41 @@ _appname/urls.py_
 ```
 from django.urls import path
 
-from .views import funcname # или 'from .views import *' для ипортирования всех функций из views.py
+from .views import func_name # или 'from .views import *' для ипортирования всех функций из views.py
 
 urlpatterns = [
-    path('', funcname), # funcname - функция обрабатывающая запрос
+    path('', func_name), # func_name - функция обрабатывающая запрос
 ]
 ```
 _views.py_
 ```
-def funcname(request):
-  return
+def func_name(request):
+  return render(request, 'appname/index.html) # подключение шаблона
+```
+
+### HTML шаблоны
+
+Папка с шаблонами: _appname/templates/appame_
+Первый шаблон: _appname/templates/appame/index.html_
+
+
+#### Полезное
+
+**Обработка списка в цикле**
+
+В _views.py_ объявление переменной
+```
+from django.shortcuts import render
+
+def func_name(request):
+    n = ['1', '2', '3'] # объявление переменной
+    return render(request, 'appaname/index.html', context={'var': n}) # ключ var со значением n - это переменная которая будет использоваться в шаблоне
+```
+В шаблоне:
+```
+{% for i in var %}
+  <p>
+    {{ i }}
+  </p>
+{% endfor %}
 ```
