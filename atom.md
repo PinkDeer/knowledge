@@ -21,8 +21,8 @@ sudo apt-get update
 sudo apt-get install atom
 ```
 
-
 ### Полезные команды
 
 _ctrl + /_ - комментарий
 _ctrl + shift + d_ - копия строки
+_shift + tab_ - смещение на один tab влево
