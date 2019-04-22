@@ -1,11 +1,8 @@
-[Atom](/atom.md) || [Bash](bash.md) || [CSS](css.md) || [Gems](/gems.md) || [Git](/git.md) || [HTML](html.md) || [jQuery](/jquery.md) || [Linux](/linux.md) || [Rails](rails.md) || [Ruby](ruby.md) || [SQL](sql.md) || [SSH](ssh.md) || [Tasks](tasks.md)
-
 ## SSH
 
+### ([habr](https://habrahabr.ru/post/122445/)|[wiki](https://ru.wikipedia.org/wiki/SSH))
 
-#### ([habr](https://habrahabr.ru/post/122445/)|[wiki](https://ru.wikipedia.org/wiki/SSH))
-
-#### Настройка:
+### Настройка SSH для Github:
 
 1) Выполнить команду `ssh-keygen`.
 2) Пропустить ввода пароля.  
