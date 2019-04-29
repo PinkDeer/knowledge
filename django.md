@@ -91,9 +91,9 @@ def func_name(request):
 
 Папка с шаблонами: _appname/templates/appame_
 
-Какой-то шаблон: _appname/templates/appame/index.html_
+Шаблон: _appname/templates/appame/index.html_
 ```
-{% extends '_appname/base_appnam_appname/templates/appame/index.html_e.html' %} # подключение базового шаблона
+{% extends 'appname/base_appname.html' %} # подключение базового шаблона приложения
 
 {% block title %}
   Some Title
@@ -103,9 +103,9 @@ def func_name(request):
   Some Content
 {% endblock %}
 ```
-Базовый шаблон для приложения: _appname/templates/appame/base_appname.html_
+Базовый шаблон приложения _appname/templates/appname/base_appname.html_
 ```
-{% extends '../base.html'%}
+{% extends '../base.html'%} # подключение базового шаблона проекта
 ```
 Необходимо подключение базового шаблона проекта
 _projectname/settings.py_
@@ -122,7 +122,7 @@ TEMPLATES = [
 ]
 ```
 
-Базовый шаблон для проекта _templates/base.html_:
+Базовый шаблон проекта _templates/base.html_:
 ```
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -142,7 +142,7 @@ TEMPLATES = [
   <body>
 
     {% block content %}
-      Theres is no any content for you
+      There is no any content for you
     {% endblock %}
 
   </body>
@@ -152,7 +152,7 @@ TEMPLATES = [
 
 ### Полезное
 
-**Обработка списка в цикле**
+#### Обработка списка в цикле
 
 В _appname/views.py_ объявление переменной
 ```
@@ -169,4 +169,29 @@ def func_name(request):
     {{ i }}
   </p>
 {% endfor %}
+```
+#### Переменная BASE_DIR
+
+_projectname/settings.py_
+```
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+```
+*Детальный разбор:*
+
+В корне проекта открыть пайтон
+```
+python3
+```
+Подключить модуль os
+```
+import os
+```
+Создать переменную base, в атрибуте указать название файла
+```
+base = os.path.dirname(os.path.dirname(os.path.abspath('settings.py')))
+base
+```
+Абсолютный путь до папки с проектом
+```
+os.path.join(base, 'templates')
 ```
