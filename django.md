@@ -150,7 +150,42 @@ TEMPLATES = [
 
 ```
 
+### Модели
+
+[Типы полей](https://docs.djangoproject.com/en/2.2/ref/models/fields/)
+
+Пример
+```
+class Classname(models.Model):
+    title = models.CharField(max_length=150, db_index=True)
+    slug = models.SlugField(max_length=150, unique=True)
+    body = models.TextField(blank=True, db_index=True)
+    date_pub = models.DateTimeField(auto_now_add=True)
+
+    # специальный метод для вывода в консоль конкретного экземляра класса вместо адреса объекта
+    def __str__(self):
+        return '{}'.format(self.title)
+```
+Создание файла миграции
+```
+./manage.py makemigrations
+```
+Применение миграции к базе данных
+```
+./manage.py migrate
+```
+
 ### Полезное
+
+#### Консоль
+Открыть консоль
+```
+./manage.py shell
+```
+Импортирование модели
+```
+from appname.models import Classname
+```
 
 #### Обработка списка в цикле
 
