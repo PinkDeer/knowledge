@@ -160,10 +160,10 @@ TEMPLATES = [
 Пример
 ```
 class Classname(models.Model):
-    title = models.CharField(max_length=150, db_index=True)
-    slug = models.SlugField(max_length=150, unique=True)
-    body = models.TextField(blank=True, db_index=True)
-    date_pub = models.DateTimeField(auto_now_add=True)
+    field1 = models.CharField(max_length=150, db_index=True)
+    field2 = models.SlugField(max_length=150, unique=True)
+    field3 = models.TextField(blank=True, db_index=True)
+    field4 = models.DateTimeField(auto_now_add=True)
 
     # специальный метод для вывода в консоль конкретного экземляра класса
     # вместо адреса объекта. Метод _str_ отвечает за вывод информации объекте
@@ -189,6 +189,19 @@ class Classname(models.Model):
 Импортирование модели
 ```
 from appname.models import Classname
+```
+
+Создать экземлпяр класса
+```
+p = Classname(field1="name1", field1="name2"...)
+```
+Вывод экземлпяра класса (благодарю def __str__(self))
+```
+p
+```
+Сохранение в базу данных
+```
+p.save()
 ```
 
 #### Обработка списка в цикле
