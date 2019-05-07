@@ -1,4 +1,5 @@
 ## Django
+ver 2.2
 
 ### Виртуальное окружение
 
@@ -124,7 +125,7 @@ TEMPLATES = [
 ]
 ```
 
-Базовый шаблон проекта _templates/base.html_:
+Базовый шаблон проекта _templates/base.html_
 ```
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -154,7 +155,7 @@ TEMPLATES = [
 
 ### Модели
 
-[Типы полей](https://docs.djangoproject.com/en/2.2/ref/models/fields/)
+Типы полей: [2.2 eng](https://docs.djangoproject.com/en/2.2/ref/models/fields/) | [1.9 rus](https://djbook.ru/rel1.9/ref/models/fields.html)
 
 Пример
 ```
@@ -164,7 +165,8 @@ class Classname(models.Model):
     body = models.TextField(blank=True, db_index=True)
     date_pub = models.DateTimeField(auto_now_add=True)
 
-    # специальный метод для вывода в консоль конкретного экземляра класса вместо адреса объекта
+    # специальный метод для вывода в консоль конкретного экземляра класса
+    # вместо адреса объекта. Метод _str_ отвечает за вывод информации объекте
     def __str__(self):
         return '{}'.format(self.title)
 ```
@@ -199,7 +201,7 @@ def func_name(request):
     n = ['1', '2', '3'] # объявление переменной
     return render(request, 'appaname/index.html', context={'var': n}) # ключ var со значением n - это переменная которая будет использоваться в шаблоне
 ```
-В шаблоне _appname/templates/appame/index.html_:
+В шаблоне _appname/templates/appame/index.html_
 ```
 {% for i in var %}
   <p>
