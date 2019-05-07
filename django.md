@@ -83,6 +83,8 @@ urlpatterns = [
 ```
 _views.py_
 ```
+from django.shortcuts import render
+
 def func_name(request):
   return render(request, 'appname/index.html) # подключение шаблона
 ```
