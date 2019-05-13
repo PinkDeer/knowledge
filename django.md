@@ -82,7 +82,7 @@ urlpatterns = [
     path('', func_name), # func_name - функция обрабатывающая запрос
 ]
 ```
-_views.py_
+_appname/views.py_
 ```
 from django.shortcuts import render
 
@@ -155,9 +155,11 @@ TEMPLATES = [
 
 ### Модели
 
+#### Создание модели
+
 Типы полей: [2.2 eng](https://docs.djangoproject.com/en/2.2/ref/models/fields/) | [1.9 rus](https://djbook.ru/rel1.9/ref/models/fields.html)
 
-Пример
+Пример _appname/models.py_
 ```
 class Classname(models.Model):
     field1 = models.CharField(max_length=150, db_index=True)
@@ -178,6 +180,45 @@ class Classname(models.Model):
 ```
 ./manage.py migrate
 ```
+
+#### Редактирование контроллера
+
+_appname/views.py_
+
+```
+from django.shortcuts import render
+from .models import Classname
+
+def func_name(request):
+  vars = Classname.objects.all()
+  return render(request, 'appname/index.html) context={'vasr': vars}
+```
+
+#### Редактирование индексного шаблона
+
+Обработка списка объектов цикле
+
+_appname/templates/appame/index.html_
+```
+{% extends 'appname/base_appname.html' %}
+
+{% block title %}
+  Some Title
+{% endblock %}
+
+{% block content %}
+  {% for var in vars %}
+    <h1>
+      {{ var.field1 }}
+    </h1>
+    <p>
+      {{ var.field2|truncatewords:15}} # фильтр шаблона
+    </p>
+  {% endfor %}
+{% endblock %}
+```
+[Подробнее](https://docs.djangoproject.com/en/2.2/ref/templates/builtins/) про фильтры шаблона
+
 
 ### Полезное
 
