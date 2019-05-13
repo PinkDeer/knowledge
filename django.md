@@ -187,16 +187,18 @@ _appname/views.py_
 
 ```
 from django.shortcuts import render
-from .models import Classname
+from .models import Classname # импортировать модель
 
 def func_name(request):
-  vars = Classname.objects.all()
-  return render(request, 'appname/index.html) context={'vasr': vars}
+  vars = Classname.objects.all() # обращение к менеджеру модели
+  return render(request, 'appname/index.html) context={'vars': vars} # ключ vars принимает значение переменной vars
 ```
+
+Объекты можно добавить через консоль
 
 #### Редактирование индексного шаблона
 
-Обработка списка объектов цикле
+Обработка списка объектов в цикле
 
 _appname/templates/appame/index.html_
 ```
@@ -209,7 +211,7 @@ _appname/templates/appame/index.html_
 {% block content %}
   {% for var in vars %}
     <h1>
-      {{ var.field1 }}
+      {{ var.field1 }} # обращение к атрибуту экзапляра класса
     </h1>
     <p>
       {{ var.field2|truncatewords:15}} # фильтр шаблона
@@ -219,6 +221,25 @@ _appname/templates/appame/index.html_
 ```
 [Подробнее](https://docs.djangoproject.com/en/2.2/ref/templates/builtins/) про фильтры шаблона
 
+### Редактирование ссылок в базовом шаблоне
+
+Присвоить имя шаблону урла
+
+_appname/urls.py_
+```
+from django.urls import path
+
+from .views import *
+
+urlpatterns = [
+    path('', func_name), name="func_name_url" # добавить атрибут name
+]
+```
+
+_templates/base.html_
+```
+<a href="{% url 'func_name_url'%}">Name</a>
+```
 
 ### Полезное
 
