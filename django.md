@@ -181,7 +181,7 @@ class Classname(models.Model):
 ./manage.py migrate
 ```
 
-#### Редактирование контроллера
+#### Редактирование views
 
 _appname/views.py_
 
@@ -234,7 +234,7 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('', func_name), name="func_name_url" # добавить атрибут name
+    path('', func_name), name="func_name_url") # добавить атрибут name
 ]
 ```
 
@@ -243,6 +243,39 @@ urlpatterns = [
 _templates/base.html_
 ```
 <a href="{% url 'func_name_url'%}">Name</a>
+```
+
+#### Отображение внутренного содержимого объектов через sluq
+
+Добавить шаблон пути
+
+_appname/urls.py_
+```
+from django.urls import path
+
+from .views import *
+
+urlpatterns = [
+    path('', func_name), name="func_name_url"),
+    path('appname/str:<slug>/'б appname_detail, name='post_detail_url') # в квадратных скобках именованнная группа символов, явно указан тип. appname_detail - функция обрабатывающая запросы по этому урлу. name- имя шаблона урла.
+
+]
+```
+Добавить функцию в views
+
+_appname/views.py_
+
+```
+from django.shortcuts import render
+from .models import Classname
+
+def func_name(request):
+  vars = Classname.objects.all()
+  return render(request, 'appname/index.html) context={'vars': vars}
+
+def appname_detail(request, slug):
+    appaname = Classname.objects.get(slug__iexact=slug)
+    return render(request, 'appname/appname_detail.html', context={'var': var})
 ```
 
 ### Полезное
