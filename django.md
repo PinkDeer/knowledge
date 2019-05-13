@@ -201,6 +201,7 @@ def func_name(request):
 Обработка списка объектов в цикле
 
 _appname/templates/appame/index.html_
+
 ```
 {% extends 'appname/base_appname.html' %}
 
@@ -219,6 +220,7 @@ _appname/templates/appame/index.html_
   {% endfor %}
 {% endblock %}
 ```
+
 [Подробнее](https://docs.djangoproject.com/en/2.2/ref/templates/builtins/) про фильтры шаблона
 
 ### Редактирование ссылок в базовом шаблоне
@@ -235,6 +237,8 @@ urlpatterns = [
     path('', func_name), name="func_name_url" # добавить атрибут name
 ]
 ```
+
+Добавить ссылку в шаблон
 
 _templates/base.html_
 ```
@@ -312,6 +316,7 @@ def func_name(request):
   </p>
 {% endfor %}
 ```
+
 #### Переменная BASE_DIR
 
 _projectname/settings.py_
