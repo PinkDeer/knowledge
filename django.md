@@ -193,15 +193,43 @@ from appname.models import Classname
 
 Создать экземлпяр класса
 ```
-p = Classname(field1="name1", field1="name2"...)
+p = Classname(field1="value1", field1="value2"...)
 ```
-Вывод экземлпяра класса (благодарю def __str__(self))
+Вывод экземлпяра класса (благодаря def __str__(self))
 ```
 p
 ```
 Сохранение в базу данных
 ```
 p.save()
+```
+Id экземпляра модели
+```
+p.id
+```
+Атрибуты класса
+```
+dir(p)
+```
+Создание экземпляра класса с помощью атрибута _objects_ (метод _save()_ не нужно)
+```
+p2 = Classname.objects.create(field1="value1", field1="value2"...)
+```
+Вывести все объекты
+```
+Classname.objects.all()
+```
+Вернуть объект с определённым значением
+```
+p3 = Classname.objects.get(field1="value1")
+```
+Вернуть объект с определённым значением независимо от регистра
+```
+p4 = Classname.objects.get(field1__iexact="Value1")
+```
+Вернуть объект/объекты содержащие определенное значение
+```
+p5 = Classname.objects.filter(field1__contains="Val")
 ```
 
 #### Обработка списка в цикле
