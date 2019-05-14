@@ -429,7 +429,7 @@ from django.urls import path
 
 from .views import *
 
-urlpatterns = [
+urlpatterns = [tags_list
     path('', func_name), name="func_name_url"),
     path('classname/<str:slug>/'б func_detail, name='classname_detail_url')
     path('tags/', tags_list, name='tags_list_url')
@@ -551,6 +551,45 @@ _appname/templates/appame/tags_list.html_
 
 {% endblock %}
 ```
+#### Создание ссылки для каждого тэга
+
+_appname/models.py_
+```
+--/--/--
+    --/--/--
+
+class Tag(models.Model):
+    title = models.CharField(max_length=50)
+    slug = models.SlugField(max_length=50, unique=True)
+
+    def get_absolute_url(self):
+        return reverse('tag_detail_url', kwargs={'slug': self.slug})
+
+    def __str__(self):
+        return '{}'.format(self.title)
+
+```
+Редактировать шаблон
+
+_blog/templates/blog/tags_list.html_
+
+```
+{% extends 'blog/base_blog.html'%}
+
+{% block title %}
+  Tags list - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+  <h1 class="mb-5">Tags</h1>
+
+    {% for tag in tags %}
+      <h3><a href="{{ tag.get_absolute_url }}">{{ tag.title }}</h3> # добавить ссылку
+    {% endfor %}
+
+{% endblock %}
+
+```
 
 ### Использование метода include
 
@@ -573,6 +612,28 @@ _appname/templates/appame/tags_list.html_
 ```
 {% include 'blog/includes/post_card_template.html' %}
 ```
+
+### Добавить footer для карточек со списком тэгов
+
+_blog/templates/blog/includes/post_card_template.html_
+
+<div class="card mb-4">
+  <div class="card-header">
+    {{ post.date_pub }}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p class="card-text">{{ post.body|truncatewords:15 }}</p>
+    <a href="{{ post.get_absolute_url }}" class="btn btn-light">Read</a>
+  </div>
+  <div class="card-footer text-muted">
+    Tags:
+    {% for tag in post.tags.all %}
+      <a href="{{ tag.get_absolute_url }}">{{ tag.title }}</a>
+    {% endfor %}
+  </div>
+</div>
+
 
 ### Полезное
 
