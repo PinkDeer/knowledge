@@ -355,7 +355,7 @@ _appname/templates/appame/index.html_
 ```
 ### Тэги
 
-Добавить в модель класс _Tag_
+#### Добавить класс _Tag_
 
 _appname/models.py_
 ```
@@ -391,7 +391,7 @@ class Classname(models.Model):
 ./manage.py migrate
 ```
 
-Проверка в консоле
+#### Проверка в консоле
 
 Импортировать все модели
 ```
@@ -416,6 +416,136 @@ p.tags.all()
 Связанные с тэгом посты
 ```
 t.posts.all()
+```
+
+#### Настройка отображения страницы Tags
+
+Добавить шаблон пути
+
+_appname/urls.py_
+
+```
+from django.urls import path
+
+from .views import *
+
+urlpatterns = [
+    path('', func_name), name="func_name_url"),
+    path('classname/<str:slug>/'б func_detail, name='classname_detail_url')
+    path('tags/', tags_list, name='tags_list_url')
+]
+```
+
+Добавить функцию в views
+
+_appname/views.py_
+
+```
+from django.shortcuts import render
+from .models import Classname, Tag # добавить модель Tag
+
+--/--/--
+    --/--/--
+
+--/--/--
+    --/--/--
+
+def tags_list(request):
+    tags = Tag.objects.all()
+    return render(request, 'appname/tags_list.html', context={'tags': tags})
+```
+
+Добавить шаблон
+
+_appname/templates/appame/tags_list.html_
+
+```
+{% extends 'appname/base_appname.html' %}
+
+{% block title %}
+  Tags list - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+  <h1>Tags</h1>
+
+    {% for tag in tags %}
+      <h3>{{ tag.title }}</h3>
+    {% endfor %}
+
+{% endblock %}
+
+```
+Добавить ссылку на тэги в базовый шаблон проекта
+
+_templates/base.html_
+
+```
+<a href="{% url 'tags_list_url'%}">Tags</a>
+```
+#### Настройка отображения страницы тэга
+Добавить шаблон пути
+
+_appname/urls.py_
+
+```
+from django.urls import path
+
+from .views import *
+
+urlpatterns = [
+    path('', func_name), name="func_name_url"),
+    path('classname/<str:slug>/'б func_detail, name='classname_detail_url')
+    path('tags/', tags_list, name='tags_list_url')
+    path('tag/<str:slug>/', tag_detail, name='tag_detail_url')
+]
+```
+Добавить функцию в views
+
+_appname/views.py_
+
+```
+from django.shortcuts import render
+from .models import Classname, Tag # добавить модель Tag
+
+--/--/--
+    --/--/--
+
+--/--/--
+    --/--/--
+
+--/--/--
+    --/--/--
+
+def tag_detail(request, slug):
+    tag = Tag.objects.get(slug__iexact=slug)
+    return render(request, 'appname/tag_detail.html', context={'tag': tag})
+
+```
+
+
+Добавить шаблон
+
+_appname/templates/appame/tags_list.html_
+
+```
+{% extends 'blog/base_blog.html'%}
+
+{% block title %}
+  {{ tag_detail_url.title }} - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+  <h1>Post with "{{ tag.title|title }}" tag:</h1> # фильтр title изменяет первую букву на заглавную
+
+  {% for post in tag.posts.all %}
+        {{ post.date_pub }}
+        {{ post.title }}
+        {{ post.body|truncatewords:15
+        <a href="{{ post.get_absolute_url }}">Read</a>
+  {% endfor %}
+
+{% endblock %}
 ```
 
 ### Полезное
