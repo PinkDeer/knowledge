@@ -353,6 +353,70 @@ _appname/templates/appame/index.html_
 ```
 <a href="{{ classname.get_absolute_url }}">Read</a>
 ```
+### Тэги
+
+Добавить в модель класс _Tag_
+
+_appname/models.py_
+```
+--/--/--
+    --/--/--
+
+class Tag(models.Model):
+    title = models.CharField(max_length=50)
+    slug = models.SlugField(max_length=50, unique=True)
+
+    def __str__(self):
+        return '{}'.format(self.title)
+
+```
+Установить связь между основной моделью и моделью тэг
+
+_appname/models.py_
+
+```
+class Classname(models.Model):
+    field1 = models.CharField(max_length=150, db_index=True)
+    field2 = models.SlugField(max_length=150, unique=True)
+    field3 = models.TextField(blank=True, db_index=True)
+    tags = models.ManyToManyField('Tag', blank=True, related_name='posts') # 'Tag' - название класса, с которым нужно установить связь. blank=True - чтобы свойство tags не было обязательным для модели. related_name='posts' - свойство, которое появиться у экземпляром класса тэг (если не указать указать, то сгенерируется "post_set")
+    field4 = models.DateTimeField(auto_now_add=True)
+
+    --/--/--
+```
+
+Создание файла миграции и применение миграции
+```
+./manage.py makemigrations
+./manage.py migrate
+```
+
+Проверка в консоле
+
+Импортировать все модели
+```
+from appname.models import *
+```
+Добавить тэг
+```
+t = Tag.objects.create(title='Text', slug='text')
+```
+Выбрать объект сновной модели для добавления тэга
+```
+p = Classname.objects.get(field1="Value1")
+```
+Добавить значение тэга
+```
+p.tags.add(t)
+```
+Все тэги объекта
+```
+p.tags.all()
+```
+Связанные с тэгом посты
+```
+t.posts.all()
+```
 
 ### Полезное
 
@@ -390,9 +454,13 @@ dir(p)
 ```
 p2 = Classname.objects.create(field1="value1", field1="value2"...)
 ```
-Вывести все объекты
+Вернуть все объекты
 ```
 Classname.objects.all()
+```
+Вернуть все объекты со значениями
+```
+Classname.objects.values()
 ```
 Вернуть объект с определённым значением
 ```
@@ -406,7 +474,14 @@ p4 = Classname.objects.get(field1__iexact="Value1")
 ```
 p5 = Classname.objects.filter(field1__contains="Val")
 ```
+##### Изменить какое-нибудь значение
 
+```
+p = Classname.objects.get(field1="Value1") # найти объект
+p.field1 # проверить значение
+p.field1 = 'new_value' # задать новое значение
+p.save # сохранить
+```
 #### Обработка списка в цикле
 
 В _appname/views.py_ объявление переменной
