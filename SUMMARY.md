@@ -1,3 +1,3 @@
-* [Вступление](django.md)
+* [Django](firts.md)
     * [Старт](start.md)
     * [Роутинг](routing.md)
