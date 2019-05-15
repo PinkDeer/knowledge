@@ -5,8 +5,8 @@
     * [Модели](django/05_models.md)
     * [Ссылки](django/06_edit_links.md)
     * [Тэги](django/07_tags.md)
-    * [Функция include](django/08_footer.md)
-    * [Ссылки](django/09_include.md)
+    * [Footer](django/08_footer.md)
+    * [Функция include](django/09_include.md)
     * [Классы](django/10_class.md)
     * [Полезное](django/00_useful.md)
 
