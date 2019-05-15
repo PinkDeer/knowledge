@@ -1,37 +1,37 @@
-Перенапраление запроса к приложению
+#### Перенапраление запроса к приложению
 
-_projectname/urls.py_
+_blogdjango/urls.py_
 ```
 from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('appname/', include('appname.urls')), # обращения по url 'appname/' обрабатываются 'appname.urls'
+    path('blog/', include('blog.urls')), # обращения по url 'blog/' обрабатываются 'blog/urls.py'
 ]
 ```
-Подключение приложения
+#### Подключение приложения
 
-_projectname/settings.py_
+_blogdjango/settings.py_
 ```
 INSTALLED_APPS = [
     ...
-    'appname',
+    'blog',
 ]
 ```
-_appname/urls.py_
+_blog/urls.py_
 ```
 from django.urls import path
 
-from .views import func_name # или 'from .views import *' для ипортирования всех функций из views.py
+from .views import posts_list # или 'from .views import *' для ипортирования всех функций из views.py
 
 urlpatterns = [
-    path('', func_name), # func_name - функция обрабатывающая запрос
+    path('', posts_list), # posts_list - функция обрабатывающая запрос
 ]
 ```
-_appname/views.py_
+_blog/views.py_
 ```
 from django.shortcuts import render
 
-def func_name(request):
-  return render(request, 'appname/index.html) # подключение шаблона
+def posts_list(request):
+  return render(request, 'blog/index.html) # подключение шаблона
 ```
