@@ -8,7 +8,7 @@
     * [Функция include](django/08_footer.md)
     * [Ссылки](django/09_include.md)
     * [Ссылки](django/09_include.md)
-    * [Классы](django/09_class.md)
+    * [Классы](django/10_class.md)
     * [Полезное](django/00_useful.md)
 
 * [Git](git.md)
