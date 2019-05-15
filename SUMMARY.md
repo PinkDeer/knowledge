@@ -5,4 +5,4 @@
 * [Git](git.md)
 
 * [Soft]()
-  * [Старт](soft/atom.md)
+  * [Atom](soft/atom.md)
