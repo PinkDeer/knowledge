@@ -3,6 +3,7 @@
     * [Роутинг](django/02_routing.md)
     * [Шаблоны](django/03_templates.md)
     * [Модели](django/04_models.md)
+    * [Ссылки](django/05_edit_links.md)
 
 * [Git](git.md)
 
