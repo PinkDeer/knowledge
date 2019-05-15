@@ -1,3 +1,5 @@
+* [Python](python.md)
+
 * [Django](django/01_first.md)
     * [Старт](django/02_start.md)
     * [Роутинг](django/03_routing.md)
