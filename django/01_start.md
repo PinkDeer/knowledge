@@ -25,12 +25,12 @@ pip install django
 ```
 Создание проекта
 ```
-django-admin startproject projectname
+django-admin startproject blogdjango
 ```
 Создание приложения
 ```
-cd projectname
-python manage.py startapp appname
+cd blogdjango
+python manage.py startapp blog
 ```
 Запуск сервера
 ```
