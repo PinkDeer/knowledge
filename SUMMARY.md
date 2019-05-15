@@ -7,7 +7,7 @@
     * [Тэги](django/07_tags.md)
     * [Функция include](django/08_footer.md)
     * [Ссылки](django/09_include.md)
-    * [Полезное](django/00_гuseful.md)
+    * [Полезное](django/00_useful.md)
 
 * [Git](git.md)
 
