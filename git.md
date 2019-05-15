@@ -1,5 +1,3 @@
-## Github
-
 ### Команды
 
 #### Первоначальная настройка системы
@@ -87,3 +85,8 @@ $ git mv README.rdoc README.md
 * [О markdown](https://help.github.com/articles/about-writing-and-formatting-on-github/)
 * [Базовый синтаксис](https://help.github.com/articles/basic-writing-and-formatting-syntax/)|[Примеры](https://learn.getgrav.org/content/markdown)
 * [Редактор](https://jbt.github.io/markdown-editor/)|[Редактор2](https://stackedit.io/editor#)
+
+### Gitbook
+
+* [Официальный сайт](https://www.gitbook.com/)
+* [Документация](https://docs.gitbook.com/)
