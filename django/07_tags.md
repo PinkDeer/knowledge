@@ -1,6 +1,6 @@
 #### Добавить класс _Tag_
 
-_appname/models.py_
+_blog/models.py_
 ```
 --/--/--
     --/--/--
@@ -15,15 +15,15 @@ class Tag(models.Model):
 ```
 Установить связь между основной моделью и моделью тэг
 
-_appname/models.py_
+_blog/models.py_
 
 ```
 class Classname(models.Model):
-    field1 = models.CharField(max_length=150, db_index=True)
-    field2 = models.SlugField(max_length=150, unique=True)
-    field3 = models.TextField(blank=True, db_index=True)
+    title = models.CharField(max_length=150, db_index=True)
+    slug = models.SlugField(max_length=150, unique=True)
+    body = models.TextField(blank=True, db_index=True)
     tags = models.ManyToManyField('Tag', blank=True, related_name='posts') # 'Tag' - название класса, с которым нужно установить связь. blank=True - чтобы свойство tags не было обязательным для модели. related_name='posts' - свойство, которое появиться у экземпляром класса тэг (если не указать указать, то сгенерируется "post_set")
-    field4 = models.DateTimeField(auto_now_add=True)
+    date_pub = models.DateTimeField(auto_now_add=True)
 
     --/--/--
 ```
@@ -65,7 +65,7 @@ t.posts.all()
 
 Добавить шаблон пути
 
-_appname/urls.py_
+_blog/urls.py_
 
 ```
 from django.urls import path
@@ -73,19 +73,19 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [tags_list
-    path('', func_name), name="func_name_url"),
-    path('classname/<str:slug>/'б func_detail, name='classname_detail_url')
+    path('', posts_list, name='posts_list_url'),
+    path('post/<str:slug>/', post_detail, name='post_detail_url'),
     path('tags/', tags_list, name='tags_list_url')
 ]
 ```
 
 Добавить функцию в views
 
-_appname/views.py_
+_blog/views.py_
 
 ```
 from django.shortcuts import render
-from .models import Classname, Tag # добавить модель Tag
+from .models import Post, Tag # добавить модель Tag
 
 --/--/--
     --/--/--
@@ -95,15 +95,15 @@ from .models import Classname, Tag # добавить модель Tag
 
 def tags_list(request):
     tags = Tag.objects.all()
-    return render(request, 'appname/tags_list.html', context={'tags': tags})
+    return render(request, 'blog/tags_list.html', context={'tags': tags})
 ```
 
 Добавить шаблон
 
-_appname/templates/appame/tags_list.html_
+_blog/templates/blog/tags_list.html_
 
 ```
-{% extends 'appname/base_appname.html' %}
+{% extends 'blog/base_blog.html' %}
 
 {% block title %}
   Tags list - {{ block.super }}
@@ -129,7 +129,7 @@ _templates/base.html_
 #### Настройка отображения страницы тэга
 Добавить шаблон пути
 
-_appname/urls.py_
+_blog/urls.py_
 
 ```
 from django.urls import path
@@ -137,19 +137,19 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('', func_name), name="func_name_url"),
-    path('classname/<str:slug>/'б func_detail, name='classname_detail_url')
-    path('tags/', tags_list, name='tags_list_url')
-    path('tag/<str:slug>/', tag_detail, name='tag_detail_url')
+  path('', posts_list, name='posts_list_url'),
+  path('post/<str:slug>/', post_detail, name='post_detail_url'),
+  path('tags/', tags_list, name='tags_list_url'),
+  path('tag/<str:slug>/', tag_detail, name='tag_detail_url')
 ]
 ```
 Добавить функцию в views
 
-_appname/views.py_
+_blog/views.py_
 
 ```
 from django.shortcuts import render
-from .models import Classname, Tag # добавить модель Tag
+from .models import Post, Tag # добавить модель Tag
 
 --/--/--
     --/--/--
@@ -162,14 +162,14 @@ from .models import Classname, Tag # добавить модель Tag
 
 def tag_detail(request, slug):
     tag = Tag.objects.get(slug__iexact=slug)
-    return render(request, 'appname/tag_detail.html', context={'tag': tag})
+    return render(request, 'blog/tag_detail.html', context={'tag': tag})
 
 ```
 
 
 Добавить шаблон
 
-_appname/templates/appame/tags_list.html_
+_blog/templates/blog/tags_list.html_
 
 ```
 {% extends 'blog/base_blog.html'%}
@@ -196,7 +196,7 @@ _appname/templates/appame/tags_list.html_
 ```
 #### Создание ссылки для каждого тэга
 
-_appname/models.py_
+_blog/models.py_
 ```
 --/--/--
     --/--/--
