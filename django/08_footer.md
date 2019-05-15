@@ -1,7 +1,9 @@
+
 #### Добавить footer для карточек со списком тэгов
 
 _blog/templates/blog/includes/post_card_template.html_
 
+```
 <div class="card mb-4">
   <div class="card-header">
     {{ post.date_pub }}
@@ -18,3 +20,4 @@ _blog/templates/blog/includes/post_card_template.html_
     {% endfor %}
   </div>
 </div>
+```
