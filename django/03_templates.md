@@ -1,8 +1,10 @@
-Папка с шаблонами: _appname/templates/appame_
+#### Папка с шаблонами
 
-Шаблон: _appname/templates/appame/index.html_
+ _blog/templates/blog_
+
+Индексный шаблон: _blog/templates/blog/index.html_
 ```
-{% extends 'appname/base_appname.html' %} # подключение базового шаблона приложения
+{% extends 'blog/base_blog.html' %} # подключение базового шаблона приложения
 
 {% block title %}
   Some Title
@@ -12,12 +14,18 @@
   Some Content
 {% endblock %}
 ```
-Базовый шаблон приложения _appname/templates/appname/base_appname.html_
+
+#### Базовый шаблон приложения
+
+_blog/templates/blog/base_blog.html_
 ```
 {% extends '../base.html'%} # подключение базового шаблона проекта
 ```
+
+#### Базовый шаблон проекта
+
 Необходимо подключение базового шаблона проекта
-_projectname/settings.py_
+_blogdjango/settings.py_
 ```
 TEMPLATES = [
     {
@@ -31,7 +39,8 @@ TEMPLATES = [
 ]
 ```
 
-Базовый шаблон проекта _templates/base.html_
+_templates/base.html_
+
 ```
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -42,7 +51,7 @@ TEMPLATES = [
     <title>
 
       {% block title %}
-        Project Name  # контент по умолчанию. Будет использоваться, если в шаблоне не определено значение
+        Blog Django  # контент по умолчанию. Будет использоваться, если в шаблоне не определено значение
       {% endblock %}
 
     </title>
