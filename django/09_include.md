@@ -13,7 +13,7 @@
   </div>
 </div>
 ```
-В шаблонах _appname/templates/appame/tags_list.html_ и _appname/templates/appame/index.html_ вместо этого кода использовать
+В шаблонах _blog/templates/appame/tags_list.html_ и _blog/templates/appame/index.html_ вместо этого кода использовать
 ```
 {% include 'blog/includes/post_card_template.html' %}
 ```
