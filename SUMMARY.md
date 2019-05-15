@@ -4,4 +4,5 @@
 
 * [Git](git.md)
 
-* [Soft](soft/atom.md)
+* [Soft]()
+  * [Старт](soft/atom.md)
