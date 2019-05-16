@@ -1,4 +1,4 @@
-#### Создать файл _blog/forms.py и добавить формы
+#### Создать файл _blog/forms.py_ и добавить формы
 
 ```
 from django import forms
