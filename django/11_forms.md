@@ -1,15 +1,23 @@
-Создать файл _blog/forms.py и добавить формы
+#### Создать файл _blog/forms.py и добавить формы
 
 ```
 from django import forms
+from .models import Tag
+
 
 class TagForm(forms.Form):
         title = forms.CharField(max_length=50)
         slug = forms.CharField(max_length=50)
 
+        def save(self):
+            new_tag = Tag.objects.create(
+                title=self.cleaned_data['title'],
+                slug=self.cleaned_data['slug']
+            )
+            return new_tag
 ```
 
-Немного теории о _cleaned_data_
+#### Немного теории о _cleaned_data_
 
 В shell ипортировать класс формы
 ```
@@ -17,8 +25,8 @@ from blog.forms import TagForm
 ```
 Создать экземляр класса TagForm
 ```
->> tf = TagForm()
->> tf
+>>> tf = TagForm()
+>>> tf
 <TagForm bound=False, valid=Unknown, fields=(title;slug)> # bound - есть ли связанные данные (введенные в форму)
 ```
 Посмотреть список атрибутов
@@ -76,3 +84,5 @@ from blog.models import Tag
 tag = Tag(title=tf.cleaned_data['title'], slug=tf.cleaned_data['slug'])
 tag.save()
 ```
+
+#### Создать шаблон для вьюхи
