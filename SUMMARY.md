@@ -1,3 +1,7 @@
+* [Bash](bash.md)
+
+* [Git](git.md)
+
 * [Python](python.md)
 
 * [Django](django/01_first.md)
@@ -7,12 +11,10 @@
     * [Модели](django/05_models.md)
     * [Ссылки](django/06_edit_links.md)
     * [Тэги](django/07_tags.md)
-    * [Подвал](django/08_footer.md)
+    * [Footer](django/08_footer.md)
     * [Функция include](django/09_include.md)
     * [Классы](django/10_class.md)
     * [Полезное](django/00_useful.md)
-
-* [Git](git.md)
 
 * [Soft]()
   * [Atom](soft/atom.md)
