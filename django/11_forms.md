@@ -85,4 +85,97 @@ tag = Tag(title=tf.cleaned_data['title'], slug=tf.cleaned_data['slug'])
 tag.save()
 ```
 
-#### Создать шаблон для вьюхи
+#### Добавить функцию _clean_slug_
+_blog/forms.py_
+```
+from django import forms
+from .models import Tag
+from django.core.exceptions import ValidationError
+
+class TagForm(forms.Form):
+        title = forms.CharField(max_length=50)
+        slug = forms.CharField(max_length=50)
+
+        def clean_slug(self):
+            new_slug = self.cleaned_date['slug'].lower() # сохранять slug в нижнем регистри
+
+            if new_slug == 'create':
+                raise ValidationError('Slug my not be "create"') # валидация slug`a 'create'
+            return new_slug
+
+
+        def save(self):
+            new_tag = Tag.objects.create(
+                title=self.cleaned_data['title'],
+                slug=self.cleaned_data['slug']
+            )
+            return new_tag
+```
+
+
+#### Указать шаблон urla`a
+
+_blog/utils.py_
+```
+from django.urls import path
+
+from .views import *
+
+urlpatterns = [
+    path('', posts_list, name='posts_list_url'),
+    path('post/<str:slug>/', PostDetail.as_view(), name='post_detail_url'),
+    path('tags/', tags_list, name='tags_list_url'),
+    path('tag/create', TagCreate.as_view(), name='tag_create_url'),
+    path('tag/<str:slug>/', TagDetail.as_view(), name='tag_detail_url')
+]
+```
+
+#### Добавить класс
+
+_blog/views.py_
+
+```
+--/--/--
+--/--/--
+from .forms import TagForm
+
+--/--/--
+    --/--/--
+--/--/--
+    --/--/--
+--/--/--
+    --/--/--
+
+
+class TagCreate(View):
+    def get(self, request):
+        form = TagForm()
+        return render(request, 'blog/tag_create.html', context={'form': form})
+
+--/--/--
+    --/--/--}
+```
+
+#### Создать шаблон
+
+_blog/templates/blog/tag_create.html_
+```
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+ Tag create  - {{ block.super
+{% endblock %}
+
+{% block content %}
+
+   <form action="{% url 'tag_create_url' %}" method="post">
+
+     {% csrf_token %}
+     {{ form.title}}
+     {{ form.slug }}
+
+     <button type="submit" class="btn btn-primary">Create Tag</button>
+   </form>
+
+{% endblock %}
+```
