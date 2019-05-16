@@ -1,4 +1,4 @@
-#### Создать шаблон _blog/templates/blog/includes/post_card_template.html_
+Создать шаблон _blog/templates/blog/includes/post_card_template.html_
 
 Перенести в него
 ```

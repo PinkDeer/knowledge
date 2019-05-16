@@ -1,4 +1,6 @@
-#### Добавить footer для карточек со списком тэгов
+Добавить footer для карточек со списком тэгов (bootstrap)
+
+
 
 _blog/templates/blog/includes/post_card_template.html_
 
