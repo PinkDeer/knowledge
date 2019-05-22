@@ -2,7 +2,9 @@
 
 * [Git](git.md)
 
-* [Python](python.md)
+* [Python]()
+    * [Теория](python/01_theory.md)
+    * [Задачи](python/02_tasks.md)
 
 * [Django](django/01_first.md)
     * [Старт](django/02_start.md)
