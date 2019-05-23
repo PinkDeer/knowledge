@@ -97,7 +97,7 @@ class TagForm(forms.Form):
         slug = forms.CharField(max_length=50)
 
         def clean_slug(self):
-            new_slug = self.cleaned_date['slug'].lower() # сохранять slug в нижнем регистри
+            new_slug = self.cleaned_data['slug'].lower() # сохранять slug в нижнем регистри
 
             if new_slug == 'create':
                 raise ValidationError('Slug my not be "create"') # валидация slug`a 'create'
@@ -113,7 +113,7 @@ class TagForm(forms.Form):
 ```
 
 
-#### Указать шаблон urla`a
+#### Указать шаблон urla\`a
 
 _blog/utils.py_
 ```
@@ -170,12 +170,104 @@ _blog/templates/blog/tag_create.html_
 
    <form action="{% url 'tag_create_url' %}" method="post">
 
-     {% csrf_token %}
-     {{ form.title}}
-     {{ form.slug }}
+      {% csrf_token %}
+
+      {% for field in form %}
+        <div class="form-group">
+
+          {% if field.errors %}
+            <div class="alert alert-danger">
+              {{ field.errors }}
+            </div>
+          {% endif %}
+
+          {{ field.label }}
+          {{ field }}
+
+        </div>
+
+      {% endfor %}
 
      <button type="submit" class="btn btn-primary">Create Tag</button>
    </form>
 
 {% endblock %}
+```
+#### Определить стиль для input\`ов
+
+_blog/forms.py_
+```
+--/--/--
+        --/--/--
+        --/--/--
+
+        title.widget.attrs.update({'class': 'form-control'})
+        slug.widget.attrs.update({'class': 'form-control'})
+
+        --/--/--
+            --/--/--
+```
+
+#### Реализовать метод POST
+
+_blog/views.py_
+```
+--/--/--
+from django.shortcuts import redirect
+--/--/--
+
+class TagCreate(View):
+    def get(self, request):
+        form = TagForm()
+        return render(request, 'blog/tag_create.html', context={'form': form})
+
+    def post(self, request):
+        bound_form = TagForm(request.POST)
+
+        if bound_form.is_valid():
+            new_tag = bound_form.save()
+            return redirect(new_tag)
+        return render(request, 'blog/tag_create.html', context={'form': bound_form})
+
+```
+#### Добавить валидацию
+
+_blog/forms.py_
+```
+def clean_slug(self):
+        new_slug = self.cleaned_data['slug'].lower()
+
+        --/--/--
+            --/--/--
+        if Tag.objects.filter(slug__iexact=new_slug).count():
+            raise ValidationError('Slug must be unique. We have "{}" slug already'.format(new_slug))
+        return new_slug
+```
+#### Оптимизация
+
+class TagForm(forms.ModelForm):
+    # title = forms.CharField(max_length=50)
+    # slug = forms.CharField(max_length=50)
+    #
+    # title.widget.attrs.update({'class': 'form-control'})
+    # slug.widget.attrs.update({'class': 'form-control'})
+
+    class Meta:
+        model = Tag
+        fields = ['title', 'slug']
+
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'slug': forms.TextInput(attrs={'class': 'form-control'})
+        }
+
+    --/--/--
+        --/--/--
+
+    # def save(self):
+    #     new_tag = Tag.objects.create(
+    #         title=self.cleaned_data['title'],
+    #         slug=self.cleaned_data['slug']
+    #     )
+    #     return new_tag  
 ```
