@@ -16,8 +16,8 @@
     * [Footer](django/08_footer.md)
     * [Функция include](django/09_include.md)
     * [Классы](django/10_class.md)
-    * [Полезное](django/00_useful.md)
     * [Формы](django/11_forms.md)
+    * [Полезное](django/00_useful.md)
 
 * [Soft]()
   * [Atom](soft/atom.md)
