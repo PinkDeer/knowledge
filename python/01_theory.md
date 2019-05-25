@@ -934,6 +934,9 @@ print(a)
 ```
 A = [int(input()) for i in range(int(input()))]
 ```
+#### while
+
+
 
 ### Заметки
 
