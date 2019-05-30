@@ -4,6 +4,8 @@
 
 * [Python]()
     * [Основы](python/01_basics.md)
+    * [Управляющие конструкции](python/02_сontrol_structures.md)
+    * [Функции и модули](python/03_functions_and_modules.md)
     * [Заметки](python/notes.md)
     * [Задачи](python/tasks.md)
 
