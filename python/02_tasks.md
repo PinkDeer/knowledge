@@ -532,7 +532,7 @@ for i in range(n):
 print(a)
 ```
 ```
-A = [int(input()) for i in range(int(input()))] # решение этой задачи через списковое включение в одну строку
+A = [input() for i in range(int(input()))] # решение этой задачи через списковое включение в одну строку
 ```
 ___
 
