@@ -67,3 +67,68 @@ def division(x,y):
     return x/y
 
 ```
+
+ver 2
+```
+print('Для спрвки введите "help", для выхода "exit".')
+
+def helpme():
+    print("""
+
+Справка
+""")
+
+while True:
+
+    while True:
+        x = input('Введите первое число: ')
+        x = x.lower()
+        if x == 'help':
+            helpme()
+            continue
+        elif x == 'exit':
+            break
+        elif x.replace('.','',1).isdigit():
+            x = float(x)
+            break
+        else:
+            print('Некорректное значение')
+            continue
+
+    while True:
+        y = input('Введите второе число: ')
+        if y == 'help':
+            helpme()
+            continue
+        elif y == 'exit':
+            raise SystemExit
+        elif y.replace('.','',1).isdigit():
+            y = float(y)
+            break
+        else:
+            print('Некорректное значение')
+            continue
+    while True:
+
+        var = input('Какую операцию выполнить? (+, -, *, /) ')
+        var = var.lower()
+        if var == '+':
+            print(x+y)
+            break
+        elif var == '-':
+            print(x-y)
+            break
+        elif var == '*':
+            print(x*y)
+            break
+        elif var == '/':
+            (x/y)
+            break
+        elif var == 'help':
+            helpme()
+            continue
+        elif var == 'exit':
+            raise SystemExit
+        else:
+            print('Некорректное значение')
+```
