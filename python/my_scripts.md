@@ -122,6 +122,9 @@ while True:
             print(x*y)
             break
         elif var == '/':
+        if y == 0:
+            print("Делить на ноль нельзя")
+              continue
             (x/y)
             break
         elif var == 'help':
