@@ -74,40 +74,33 @@ print('Для спрвки введите "help", для выхода "exit".')
 
 def helpme():
     print("""
-
 Справка
 """)
 
+def func(z):
+    while True:
+        z = input('Введите число ')
+        z = z.lower()
+        if z == 'help':
+            helpme()
+            continue
+        elif z == 'exit':
+            raise SystemExit
+        elif z.replace('.','',1).isdigit():
+            z = float(z)
+            return(z)
+        else:
+            print('Некорректное значение')
+            continue
+
+flag = False
+
 while True:
 
-    while True:
-        x = input('Введите первое число: ')
-        x = x.lower()
-        if x == 'help':
-            helpme()
-            continue
-        elif x == 'exit':
-            break
-        elif x.replace('.','',1).isdigit():
-            x = float(x)
-            break
-        else:
-            print('Некорректное значение')
-            continue
+    z = 0
+    x = func(z)
+    y = func(z)
 
-    while True:
-        y = input('Введите второе число: ')
-        if y == 'help':
-            helpme()
-            continue
-        elif y == 'exit':
-            raise SystemExit
-        elif y.replace('.','',1).isdigit():
-            y = float(y)
-            break
-        else:
-            print('Некорректное значение')
-            continue
     while True:
 
         var = input('Какую операцию выполнить? (+, -, *, /) ')
@@ -122,10 +115,11 @@ while True:
             print(x*y)
             break
         elif var == '/':
-        if y == 0:
-            print("Делить на ноль нельзя")
-              continue
-            (x/y)
+            if y == 0:
+                print('На ноль делить нельзя')
+                flag == True
+                break
+            print(x/y)
             break
         elif var == 'help':
             helpme()
@@ -134,4 +128,7 @@ while True:
             raise SystemExit
         else:
             print('Некорректное значение')
+
+        if flag == True:
+            break
 ```
