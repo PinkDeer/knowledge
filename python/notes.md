@@ -73,6 +73,19 @@ def func():
 #### Регулярные выражения
 
 ##### Провека строки на соответвие числу с плавающей точкой
+
 ```
 s.replace('.','',1).isdigit()
+```
+#### Выход из нескольких циклов
+
+```
+flag = False
+for outer in outer_list:
+    for inner in inner_list:
+        if some_condition:
+            flag = True
+            break
+    if flag:
+        break
 ```
