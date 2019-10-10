@@ -23,7 +23,7 @@
     * [Полезное](django/00_useful.md)
     
 * [С#]()
-    * [Обшая информация](csharp/01_basics.md)
+    * [Общая информация](csharp/01_basics.md)
 
 * [Soft]()
   * [Atom](soft/atom.md)
