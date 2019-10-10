@@ -21,6 +21,9 @@
     * [Классы](django/10_class.md)
     * [Формы](django/11_forms.md)
     * [Полезное](django/00_useful.md)
+    
+* [С#]()
+    * [Обшая информация](csharp/01_basics.md)
 
 * [Soft]()
   * [Atom](soft/atom.md)
