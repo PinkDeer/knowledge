@@ -22,8 +22,9 @@
     * [Формы](django/11_forms.md)
     * [Полезное](django/00_useful.md)
     
-* [С#]()
+* [.net]()
     * [Общая информация](net/01_basics.md)
 
 * [Soft]()
   * [Atom](soft/atom.md)
+  * [Visual Studio](soft/vs.md)
