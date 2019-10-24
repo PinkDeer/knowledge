@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\net"
+    "\\net",
+    "\\soft"
   ],
-  "SelectedNode": "\\SUMMARY.md",
+  "SelectedNode": "\\bash.md",
   "PreviewInSolutionExplorer": false
 }
