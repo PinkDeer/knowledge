@@ -2,8 +2,8 @@
 
 #### Расширения
 
-GitHub Extension for Visual Studio  
-MarkdownEditor
+* [GitHub Extension for Visual Studio](https://visualstudio.github.com/)  
+* [MarkdownEditor](https://github.com/madskristensen/MarkdownEditor)
 
 #### Полезное
 
