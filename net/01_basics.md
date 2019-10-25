@@ -3,11 +3,11 @@
 
 ### Основные понятия
 
-[CLR (Common_Language_Runtime)](https://ru.wikipedia.org/wiki/Common_Language_Runtime)  
-[CIL (Common_Intermediate_Language)](https://ru.wikipedia.org/wiki/Common_Intermediate_Language)  
-[CTS (Common_Type_System)](https://ru.wikipedia.org/wiki/Common_Type_System)  
-[CLS (Common Language Specification)](https://ru.bmstu.wiki/CLS_(Common_Language_Specification))  
-[JIT-компиляция](https://ru.wikipedia.org/wiki/JIT-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B8%D0%BB%D1%8F%D1%86%D0%B8%D1%8F)  
+[CLR (Common Language Runtime)](https://ru.wikipedia.org/wiki/Common_Language_Runtime)  
+[CIL (Common Intermediate Language)](https://ru.wikipedia.org/wiki/Common_Intermediate_Language)  
+[CTS (Common Type System)](https://ru.wikipedia.org/wiki/Common_Type_System)  
+[CLS (Common Language Specification)](https://tinyurl.com/y4bmgdlu)  
+[JIT-компиляция](https://tinyurl.com/y3232nc8)  
 
 ### Документация
 
