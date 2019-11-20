@@ -12,4 +12,4 @@
 ### Документация
 
 * [Документация по .NET](https://docs.microsoft.com/ru-ru/dotnet/)
-* [Библиотека классов .net framework](https://docs.microsoft.com/ru-ru/dotnet/api/system?view=netcore-3.0)
+* [Библиотека классов .net framework](https://docs.microsoft.com/ru-ru/dotnet/api/system?view=netc
