@@ -4,6 +4,7 @@
 
 * [GitHub Extension for Visual Studio](https://visualstudio.github.com/)  
 * [MarkdownEditor](https://github.com/madskristensen/MarkdownEditor)
+* [Toggle Comment](https://marketplace.visualstudio.com/items?itemName=munyabe.ToggleComment)
 
 #### Полезное
 

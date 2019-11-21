@@ -3,8 +3,9 @@
     "",
     "\\net",
     "\\python",
-    "\\soft"
+    "\\soft",
+    "\\sql"
   ],
-  "SelectedNode": "\\net\\01_basics.md",
+  "SelectedNode": "\\temp",
   "PreviewInSolutionExplorer": false
 }
