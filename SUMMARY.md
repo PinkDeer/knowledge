@@ -2,6 +2,8 @@
 
 * [Git](git.md)
 
+* [sql](sql.md)
+
 * [Python]()
     * [Основы](python/01_basics.md)
     * [Управляющие конструкции](python/02_сontrol_structures.md)
