@@ -6,11 +6,11 @@
 ```
 SELECT * FROM tableName
 ```
-Упорядочить или выбрать опредеённые столбцы
+Упорядочить или выбрать определённые столбцы
 ```
 SELECT column2, column1, column4 FROM tableName
 ```
-Получить только уникальный строки (вместо __DISTINICT__ по умолчанию принимается __ALL__ )
+Получить только уникальные строки (вместо __DISTINICT__ по умолчанию принимается __ALL__ )
 ```
 SELECT DISTINICT column2, column1 FROM tableName
 ```
