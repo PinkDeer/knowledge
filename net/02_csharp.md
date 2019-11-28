@@ -55,6 +55,9 @@ Console.WriteLine($"Hello, {name}!");
 
 ### Конвертация
 
-[Официальная документация](https://docs.microsoft.com/ru-ru/dotnet/api/system.convert?view=netframework-4.8)  
+[Класс Convert (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/api/system.convert?view=netframework-4.8)  
 [Пример конвертации в string в int](https://github.com/PinkDeer/ConsoleApps/blob/master/Conversion/Program.cs)  
-[Пример конвертация дроби с точкой](https://github.com/PinkDeer/ConsoleApps/blob/master/FractionConversion/Program.cs)
+[Пример конвертация дроби с точкой](https://github.com/PinkDeer/ConsoleApps/blob/master/FractionConversion/Program.cs)  
+[Метод Parse (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/api/system.int32.parse?view=netframework-4.8#System_Int32_Parse_System_String_System_Globalization_NumberStyles_)  
+[Метод TryParse (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/api/system.int32.tryparse?view=netframework-4.8)  
+[Пример Parse и TryParse](https://github.com/PinkDeer/ConsoleApps/blob/master/ParseTryparse/Program.cs)
