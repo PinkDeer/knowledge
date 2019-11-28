@@ -37,3 +37,14 @@ char и string
 char = '';
 string = "";
 ```
+### Ввод данных в консоль
+
+Запись в переменную
+```
+string name = Console.ReadLine();
+```
+Вывод
+```
+Console.WriteLine("Hello, " + name + "!");
+Console.WriteLine($"Hello, {name}!");
+```
