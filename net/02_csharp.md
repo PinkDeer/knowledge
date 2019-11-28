@@ -61,3 +61,10 @@ Console.WriteLine($"Hello, {name}!");
 [Метод Parse (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/api/system.int32.parse?view=netframework-4.8#System_Int32_Parse_System_String_System_Globalization_NumberStyles_)  
 [Метод TryParse (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/api/system.int32.tryparse?view=netframework-4.8)  
 [Пример Parse и TryParse](https://github.com/PinkDeer/ConsoleApps/blob/master/ParseTryparse/Program.cs)
+
+### Арифметические операторы
+
+Бинарные арифметические операции: сложение(+), вычитание(-), умножение(*), деление(/), получение остатка от целочисленного деления двух чисел(%).
+
+[Арифметические операции (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/arithmetic-operators)  
+[Пример](https://github.com/PinkDeer/ConsoleApps/blob/master/ArithmeticOperations/Program.cs)
