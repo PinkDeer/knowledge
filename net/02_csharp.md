@@ -11,7 +11,7 @@ C# является регистрозависимым языком.
 ### Типы данных
 
 [Официальная документация](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/built-in-types-table)  
-[Консольное приложение](https://github.com/PinkDeer/ConsoleApps/tree/master/DataTypes)
+[Консольное приложение](https://github.com/PinkDeer/ConsoleApps/blob/master/DataTypes/Program.cs)
 
 
 ### Переменная
@@ -37,6 +37,8 @@ char и string
 char = '';
 string = "";
 ```
+[Пример](https://github.com/PinkDeer/ConsoleApps/blob/master/variables/Program.cs)
+
 ### Ввод данных в консоль
 
 Запись в переменную
@@ -48,3 +50,11 @@ string name = Console.ReadLine();
 Console.WriteLine("Hello, " + name + "!");
 Console.WriteLine($"Hello, {name}!");
 ```
+[Пример](https://github.com/PinkDeer/ConsoleApps/blob/master/InputToTheConsole/Program.cs)
+
+
+### Конвертация
+
+[Официальная документация](https://docs.microsoft.com/ru-ru/dotnet/api/system.convert?view=netframework-4.8)  
+[Пример конвертации в string в int](https://github.com/PinkDeer/ConsoleApps/blob/master/Conversion/Program.cs)  
+[Пример конвертация дроби с точкой](https://github.com/PinkDeer/ConsoleApps/blob/master/FractionConversion/Program.cs)
