@@ -85,6 +85,9 @@ Console.WriteLine($"Hello, {name}!");
 [Оператор switch (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/switch)  
 [Пример](https://github.com/PinkDeer/ConsoleApps/blob/master/switch/Program.cs)
 
+### Обработка исключений
+[Статья на metanit.com](https://metanit.com/sharp/tutorial/2.14.php)   
+
 ### Полезные фичи
 
 #### switch
@@ -102,8 +105,14 @@ ConsoleKey consoleKey = Console.ReadKey().Key;
 
 #### Команда в VS
 
-__cw__ + __двойно таб__ -> Console.WriteLine();  
+__cw__ + __двойной таб__ -> Console.WriteLine();  
 __ctrl + d__ - копирование строки  
 __alt + стрелка вверх/вниз__ - перемещение строки вверх/вниз  
 __ctrl + стрелка влево/вправо__ - смещение на одно слово  
-__ctrl + стрелка вверх/вниз__ - смещение страницы на одну строку  
+__ctrl + стрелка вверх/вниз__ - смещение страницы на одну строку
+
+#### Консоль
+
+__Console.Clear();__ - очисить консоль  
+__continue__ - перейти на начало цикла
+
