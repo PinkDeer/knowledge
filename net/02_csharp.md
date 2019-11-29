@@ -88,7 +88,7 @@ Console.WriteLine($"Hello, {name}!");
 ### Циклы
 [Статья на metanit.com](https://metanit.com/sharp/tutorial/2.6.php)
 
-#### While
+#### while
 [while (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/while)  
 [Пример](https://github.com/PinkDeer/ConsoleApps/blob/master/While/Program.cs)
 
