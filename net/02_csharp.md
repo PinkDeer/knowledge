@@ -67,4 +67,5 @@ Console.WriteLine($"Hello, {name}!");
 Бинарные арифметические операции: сложение(+), вычитание(-), умножение(*), деление(/), получение остатка от целочисленного деления двух чисел(%).
 
 [Арифметические операции (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/arithmetic-operators)  
-[Пример](https://github.com/PinkDeer/ConsoleApps/blob/master/ArithmeticOperations/Program.cs)
+[Хорошая статья на metanit.com](https://metanit.com/sharp/tutorial/2.3.php)  
+[Примеры операций](https://github.com/PinkDeer/ConsoleApps/blob/master/ArithmeticOperations/Program.cs)|[Примеры инкремента и декремента](https://github.com/PinkDeer/ConsoleApps/blob/master/Increment%2CDecrement/Program.cs)  
