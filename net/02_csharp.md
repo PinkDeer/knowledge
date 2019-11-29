@@ -75,4 +75,10 @@ Console.WriteLine($"Hello, {name}!");
 [Операторы сравнения (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/comparison-operators)
 [Логические операторы](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/boolean-logical-operators)  
 [Статья на metanit.com](https://metanit.com/sharp/tutorial/2.24.php)
+[Примеры](https://github.com/PinkDeer/ConsoleApps/blob/master/ConditionalExpressions/Program.cs)
 
+### Условные конструкции
+
+[if-else (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/if-else)
+[Статья на metanit.com](https://metanit.com/sharp/tutorial/2.5.php)
+[Пример](https://github.com/PinkDeer/ConsoleApps/blob/master/Conditional%D0%A1onstructions/Program.cs)
