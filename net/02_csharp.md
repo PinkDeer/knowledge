@@ -85,7 +85,15 @@ Console.WriteLine($"Hello, {name}!");
 [Оператор switch (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/switch)  
 [Пример](https://github.com/PinkDeer/ConsoleApps/blob/master/switch/Program.cs)
 
+### Циклы
+[Статья на metanit.com](https://metanit.com/sharp/tutorial/2.6.php)
+
+#### While
+[while (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/while)  
+[Пример](https://github.com/PinkDeer/ConsoleApps/blob/master/While/Program.cs)
+
 ### Обработка исключений
+[Исключения и обработка исключений (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/exceptions/)  
 [Статья на metanit.com](https://metanit.com/sharp/tutorial/2.14.php)   
 
 ### Полезные фичи
