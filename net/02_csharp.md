@@ -86,11 +86,15 @@ Console.WriteLine($"Hello, {name}!");
 [Пример](https://github.com/PinkDeer/ConsoleApps/blob/master/switch/Program.cs)
 
 ### Циклы
-[Статья на metanit.com](https://metanit.com/sharp/tutorial/2.6.php)
+[Статья на metanit.com](https://metanit.com/sharp/tutorial/2.6.php) 
 
 #### while
 [while (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/while)  
 [Пример](https://github.com/PinkDeer/ConsoleApps/blob/master/While/Program.cs)
+
+#### for
+
+[for (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/for)
 
 ### Обработка исключений
 [Исключения и обработка исключений (Официальная документация)](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/exceptions/)  
