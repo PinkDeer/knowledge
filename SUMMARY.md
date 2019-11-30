@@ -27,6 +27,7 @@
 * [.net]()
     * [Общая информация](net/01_basics.md)
     * [C#](net/02_csharp.md)
+    * [Задачи C#](net/03_exercises.md)
 
 * [Soft]()
   * [Atom](soft/atom.md)
