@@ -64,12 +64,13 @@ Console.WriteLine($"Hello, {name}!");
 
 ### Арифметические операторы
 
-Бинарные арифметические операции: сложение(+), вычитание(-), умножение(*), деление(/), получение остатка от целочисленного деления двух чисел(%).
+Унарные операции выполняются над одним операндом: инкремент(++) и декремент(--).
+Бинарные операции выполняются над двумя операндом: сложение(+), вычитание(-), умножение(*), деление(/), получение остатка от целочисленного деления двух чисел(%).  
+Тернарные операции выполняются над тремя операндами.
 
 [Арифметические операции (оф.док)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/arithmetic-operators)  
 [Статья на metanit.com](https://metanit.com/sharp/tutorial/2.3.php)  
-[Примеры операций](https://github.com/PinkDeer/ConsoleApps/blob/master/ArithmeticOperations/Program.cs)|[Примеры инкремента и декремента](https://github.com/PinkDeer/ConsoleApps/blob/master/Increment%2CDecrement/Program.cs)  
-
+Примеры операций: [Бинарыне](https://github.com/PinkDeer/ConsoleApps/blob/master/ArithmeticOperations/Program.cs) | [Унарные](https://github.com/PinkDeer/ConsoleApps/blob/master/Increment%2CDecrement/Program.cs) | [Тернарные](https://github.com/PinkDeer/ConsoleApps/blob/master/TernaryOperators/Program.cs)
 ### Условные варажения
 
 [Операторы сравнения (оф.док)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/comparison-operators)  
