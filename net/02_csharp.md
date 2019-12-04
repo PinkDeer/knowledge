@@ -97,7 +97,13 @@ Console.WriteLine($"Hello, {name}!");
 
 [for (оф.док)](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/for)
 
+### Массива
+
+[Массивы(оф.док)](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/arrays/)  
+[Статья на metanit.com](https://metanit.com/sharp/tutorial/2.4.php)    
+
 ### Обработка исключений
+
 [Исключения и обработка исключений (оф.док)](https://docs.microsoft.com/ru-ru/dotnet/csharp/programming-guide/exceptions/)  
 [Статья на metanit.com](https://metanit.com/sharp/tutorial/2.14.php)   
 
