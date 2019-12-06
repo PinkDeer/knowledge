@@ -24,10 +24,11 @@
     * [Формы](django/11_forms.md)
     * [Полезное](django/00_useful.md)
     
-* [.net]()
+* [.net core]()
     * [Общая информация](net/01_basics.md)
     * [C#](net/02_csharp.md)
     * [Задачи C#](net/03_exercises.md)
+    * [MVC](net/04_mvc.md)
 
 * [Soft]()
   * [Atom](soft/atom.md)
