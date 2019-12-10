@@ -33,3 +33,5 @@
 * [Soft]()
   * [Atom](soft/atom.md)
   * [Visual Studio](soft/vs.md)
+    
+* [Analytics](analytics.md)
