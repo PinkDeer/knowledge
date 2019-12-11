@@ -35,3 +35,5 @@
   * [Visual Studio](soft/vs.md)
     
 * [Analytics](analytics.md)
+* [Web](web.md)
+  
