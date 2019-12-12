@@ -14,3 +14,7 @@ SELECT column2, column1, column4 FROM tableName
 ```
 SELECT DISTINICT column2, column1 FROM tableName
 ```
+Сортировака по указанным полям
+```
+ORDER BY
+```
