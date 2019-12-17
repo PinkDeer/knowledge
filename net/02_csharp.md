@@ -135,5 +135,18 @@ __ctrl + стрелка вверх/вниз__ - смещение страниц�
 __Console.Clear();__ - очисить консоль  
 __continue;__ - перейти на начало цикла ([оф.док](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/continue))  
 __break;__ - выход из цикла ([оф.док](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/break))  
-__System.Threading.Thread.Sleep(300);__ - выполнение каждой итерации (миллисекунд)  
+__System.Threading.Thread.Sleep(300);__ - выполнение каждой итерации (миллисекунд)
+
+#### Компиляция в командной строке (.NET Core CLI)
+
+Создание проекта
+```
+dotnet new console
+```
+Запуск проекта
+```
+dotnet run
+```
+
+
 
