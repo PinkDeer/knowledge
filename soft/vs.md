@@ -10,4 +10,8 @@
 
 ##### Изучить сборку
 В командной строке ввести _ildasm.exe_ ([intermediate language disassembler](https://docs.microsoft.com/ru-ru/dotnet/framework/tools/ildasm-exe-il-disassembler)).  
-Просмотр метаданных _CTRL+M_.	
+Просмотр метаданных _CTRL+M_.
+
+##### Выбор версии языка
+
+Project -> Properties -> Buid -> Advanced
